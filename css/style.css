@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.cambioCursor{
+  cursor: pointer;
+}
+
+.textoClaro{
+  color: #fddfb5;
+}
+
+.centradoEnHeader{
+  position: relative;
+  top: 30%;
+}
+
+.centrarTexto{
+  text-align: center;
+}
+
+body{
+  padding: 0;
+  background-size: 100%;
+  background-color: rgb(41, 41, 41);
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+header{
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 0px 10px 0px;
+}
+
+nav ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li{
+  margin-right: 50px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  position: relative;
+  top: 30%;
+}
+
+.logo{
+  position: relative;
+  height: 60px;
+  left: 20px;
+}
+
+#contenedorUsuario{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 10px;
+  margin-right: 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+#iconoUsuario{
+  position: relative;
+  height: 30px;
+  width: 30px;
+}
+
+.contenedorInformacion{
+  position: absolute;
+  width: calc(100% - 500px);
+  height: 55%;
+  top: 15%;
+  left: 50%;
+  padding: 30px;
+  background-image: url(/img/BGAlmacen.png);
+  background-size: cover;
+  border-radius: 30px;
+  box-shadow: 0px 0px 5px black;
+  transform: translateX(-50%);
+}
+
+#nombreAplicacion{
+  font-size: 70px;
+  text-shadow: 0px 0px 10px black;
+}
+
+#informacionApp{
+  font-size: 30px;
+  width: 550px;
+  text-shadow: 0px 0px 10px black;
+}
+
+.flecha{
+  background-image: url(../img/iconoFlecha.png);
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+  position: absolute;
+  top: 45%;
+}
+
+#derecha{
+  right: 0%;
+}
+
+#izquierda{
+  transform: rotate(180deg);
+  left: 0px;
+}
+
+.boton{
+  width: fit-content;
+  background: none;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+#accederAplicacion{
+  padding: 10px;
+  position: absolute;
+  bottom: 10%;
+  left: 80%;
+  right: 5%;
+  font-size: 20px;
+  background: none;
+  border: solid 3px #fddfb5;
+  border-radius: 5%;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+footer{
+  width: 100%;
+  height: fit-content;
+  position: absolute;
+  bottom: 7%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.contenedorAtajo{
+  width: 120px;
+  height: 60px;
+  margin: 0 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 0%;
+}
+
+.iconoAtajo{
+  width: 80px;
+  height: 80px;
+}
+
+.nombreAtajo{
+  display: block;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+#idiomaDelSistema{
+  background-image: url(../img/banderaUruguay.png);
+  width: 25px;
+  height: 17px;
+  background-size: cover;
+  border: solid 3px #fddfb5;
+  opacity: 70%;
+}
+
+#idiomaDelSistema:hover{
+  opacity: 100%;
+}
+
+#aparienciaDelSistema{
+  background-image: url(../img/iconoModoOscuro.png);
+  width: 25px;
+  height: 25px;
+  background-size: cover;
+}
+
+.divEnHeader{
+  margin-top: 10px;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 30, 30);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: 1;
+  border-radius: 10px;
+  display: flex;
+  align-items:baseline;
+  justify-content:end;
+
+}
+
+.menu li:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+}
+
+#iconoSalida{
+  position: relative;
+  height: 25px;
+  width: 25px;
+  right: 15px;
+  top: 5px;
+}
+
+@media screen and (max-width: 1400px) and (max-height: 768px) {
+  #nombreAplicacion{
+    font-size: 45px;
+  }
+
+  #informacionApp{
+    font-size: 25px;
+  }
+}
