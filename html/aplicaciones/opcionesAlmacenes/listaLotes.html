@@ -7,32 +7,33 @@
     <link rel="stylesheet" href="/css/clasesGlobales.css">
     <link rel="stylesheet" href="/css/listaLotes.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="icon" href="/img/iconoPestana.png">
     <title>E.L.S - Lista de Lotes</title>
 </head>
 <body>
     <img id="ajusteBrillo" src="/img/BGNegro.png">
     <header class="textoClaro">
-        <a href="/"><img class="logo" src="/img/Logo del Sistema.png"></a>
-        <nav>
-          <ul class="menu">
-            <li class="cambioCursor"><a href="/">HOME</a></li>
-            <li><a href="/html/opcionesHeader/acercaDe.html">ACERCA DE</a></li>
-            <li class="cambioCursor"><a href="/html/opcionesHeader/contacto.html">CONTACTO</a></li>
-            <li><div class="boton textoClaro cambioCursor divEnHeader" id="idiomaDelSistema"></div></li>
-            <li><div class="boton textoClaro cambioCursor divEnHeader" id="aparienciaDelSistema"></div></li>
-            <li>
-              <div id="contenedorUsuario">
-                <img class="usuario" id="iconoUsuario" src="/img/iconoUsuario.png">
-                <button class="boton textoClaro">NOMBRE DEL USUARIO</button>
-                <ul class="submenu">
-                  <li><img class="salir" id="iconoSalida" src="/img/iconoSalir.png">
-                    <a href="/html/login.html">CERRAR SESIÓN</a></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <a href="/"><img class="logo" src="/img/Logo del Sistema.png"></a>
+      <nav>
+        <ul class="menu">
+          <li class="cambioCursor"><a href="/">HOME</a></li>
+          <li><a href="/html/opcionesHeader/acercaDe.html" id="acercaDe">ACERCA DE</a></li>
+          <li class="cambioCursor"><a href="/html/opcionesHeader/contacto.html" id="contacto">CONTACTO</a></li>
+          <li><div class="boton textoClaro cambioCursor divEnHeader" id="idiomaDelSistema"></div></li>
+          <li><div class="boton textoClaro cambioCursor divEnHeader" id="aparienciaDelSistema"></div></li>
+          <li>
+            <div id="contenedorUsuario">
+              <img class="usuario" id="iconoUsuario" src="/img/iconoUsuario.png">
+              <button class="boton textoClaro">NOMBRE DEL USUARIO</button>
+              <ul class="submenu">
+                <li><img class="salir" id="iconoSalida" src="/img/iconoSalir.png">
+                  <a href="/html/login.html" id="cerrarSesion">CERRAR SESIÓN</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <div class="contenedorLotes">
         <div class="opcionesLotes">
             <img src="/img/iconoAgregar.png" class="cambioCursor" id="crearLote">
@@ -40,11 +41,11 @@
             <form action="/" id="formularioBuscarLotes" method="post">
                 <input class="roboto textoClaro" id="barraDeBusqueda" name="barraDeBusqueda" placeholder="Buscar Lote">
                 <div class="roboto textoClaro" id="contenedorFiltroDeBusqueda">
-                    <label><b>Filtro de Búsqueda:</b></label>
+                    <label id="filtroBusqueda"><b>Filtro de Búsqueda:</b></label>
                     <select class="roboto textoClaro" id="filtroDeLista" name="filtroDeLista">
-                        <option value="codigoIdentificador"><b>Código Identificador</b></option>
-                        <option value="codigoDeBulto"><b>Código de Bulto</b></option>
-                        <option value="tipoDeArticulo"><b>Tipo de Artículo</b></option>
+                        <option value="codigoIdentificador" id="codigoIdentificador"><b>Código Identificador</b></option>
+                        <option value="codigoDeBulto" id="codigoDeBulto"><b>Código de Bulto</b></option>
+                        <option value="tipoDeArticulo" id="tipoDeArticulo"><b>Tipo de Artículo</b></option>
                     <select>
                 </div>
                 <button type="submit" id="botonBuscar">
@@ -57,16 +58,16 @@
     <div class="contenedorCrearLotes roboto textoClaro">
         <img class="cambioCursor" id="cerrarContenedorCrear" src="/img/iconoCerrar.png">
         <form action="" method="post" id="formularioCrearLotes">
-            <label><b>ID del Lote: </b></label>
+            <label id="idLote"><b>ID del Lote: </b></label>
             <input type="number" class="inputCrearLote textoClaro roboto" min="1" max="9999999" required>
             <br><br>
-            <label><b>Cantidad de Paquetes: </b></label>
+            <label id="cantidadPaquetes"><b>Cantidad de Paquetes: </b></label>
             <input type="number" class="inputCrearLote textoClaro roboto" min="1" max="20" required>
             <br><br>
-            <label><b>Destino: </b></label>
+            <label id="destino"><b>Destino: </b></label>
             <input type="text" class="inputCrearLote textoClaro roboto" required>
             <br><br>
-            <label><b>Almacen: </b></label>
+            <label id="almacen"><b>Almacén: </b></label>
             <input type="number" class="inputCrearLote textoClaro roboto" min="1" max="9999999" required>
             <br><br>
             <button type="submit" class="botonCrearLote roboto textoClaro cambioCursor" id="botonCrearLote"><b>Embalsar Lote</b></button>
