@@ -1,3 +1,10 @@
+/*
+$('#idiomaDelSistema').css('background-image', 'url(/img/banderaUK.png)');
+$('#idiomaDelSistema').css('background-image', 'url(/img/banderaUruguay.png)');
+*/
+
+import { ruta } from "./variables.js";
+
 function revelarPreviewArticulos(){
     $(".contenedorAccesoAListas").css("background-image", "url(/img/BGArticulos.png)");
     $("#iconoListadoArticulos").attr("src", "/img/iconoArticuloHover.png");
@@ -57,50 +64,27 @@ $("#botonListaLotes").mouseout(function() {
 });
 
 $(document).ready(function () {
-    var currentLanguage = 'es';
+    Promise.all([fetch(ruta), fetch('./elementos.json')])
+    .then((responses) => Promise.all(responses.map((response) => response.json())))
+    .then((data) => {
+        const idioma = data[0];
+        const arrayDeIdioma = idioma[0]
+        const arrayDeTextos = data[1];
+        const arrayDeTextos2 = arrayDeTextos[0]
 
-    function toggleLanguage() {
-        if (currentLanguage === 'es') {
-            currentLanguage = 'en';
-            setEnglish();
-        } else {
-            currentLanguage = 'es';
-            setSpanish();
+        for (let posicion = 0; posicion < Object.keys(arrayDeTextos2).length; posicion++){
+            let texto = document.getElementById(arrayDeTextos2[posicion])
+            texto.textContent = arrayDeIdioma[posicion]
         }
+    })
 
-        if (currentLanguage === 'es') {
-            $('#idiomaDelSistema').css('background-image', 'url(/img/banderaUruguay.png)');
-        } else {
-            $('#idiomaDelSistema').css('background-image', 'url(/img/banderaUK.png)');
-        }
-    }
-
-
-    function setEnglish() {
-        $('#listaArticulos').text('List of Articles');
-        $('#listaPaquetes').text('List of Packages');
-        $('#listaLotes').text('List of Lots');
-        $('#acercaDe').text('ABOUT');
-        $('#contacto').text('CONTACT');
-        $('#ubicacion').text('Current Warehouse');
-        $('#cerrarSesion').text('LOG OUT');
-    }
-
-    function setSpanish() {
-        $('#listaArticulos').text('Lista de Artículo');
-        $('#listaPaquetes').text('Lista de Paquetes');
-        $('#listaLotes').text('Lista de Lotes');
-        $('#acercaDe').text('ACERCA DE');
-        $('#contacto').text('CONTACTO');
-        $('#ubicacion').text('Almacen Actual');
-        $('#cerrarSesion').text('CERRAR SESIÓN');
-    }
-
-    $('#idiomaDelSistema').click(function () {
-        toggleLanguage();
-    });
-
-    $('#idiomaDelSistema').dblclick(function () {
-        toggleLanguage();
-    });
+    function aplicarIngles() {
+        document.cookie = "lang=en"
+        location.reload()
+      }
+      
+      function aplicarEspanol(){
+        document.cookie = "lang=es"
+        location.reload()
+      }
 });
