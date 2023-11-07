@@ -55,3 +55,52 @@ $("#botonListaLotes").mouseover(function() {
 $("#botonListaLotes").mouseout(function() {
     restaurarBody();
 });
+
+$(document).ready(function () {
+    var currentLanguage = 'es';
+
+    function toggleLanguage() {
+        if (currentLanguage === 'es') {
+            currentLanguage = 'en';
+            setEnglish();
+        } else {
+            currentLanguage = 'es';
+            setSpanish();
+        }
+
+        if (currentLanguage === 'es') {
+            $('#idiomaDelSistema').css('background-image', 'url(/img/banderaUruguay.png)');
+        } else {
+            $('#idiomaDelSistema').css('background-image', 'url(/img/banderaUK.png)');
+        }
+    }
+
+
+    function setEnglish() {
+        $('#listaArticulos').text('List of Articles');
+        $('#listaPaquetes').text('List of Packages');
+        $('#listaLotes').text('List of Lots');
+        $('#acercaDe').text('ABOUT');
+        $('#contacto').text('CONTACT');
+        $('#ubicacion').text('Current Warehouse');
+        $('#cerrarSesion').text('LOG OUT');
+    }
+
+    function setSpanish() {
+        $('#listaArticulos').text('Lista de Artículo');
+        $('#listaPaquetes').text('Lista de Paquetes');
+        $('#listaLotes').text('Lista de Lotes');
+        $('#acercaDe').text('ACERCA DE');
+        $('#contacto').text('CONTACTO');
+        $('#ubicacion').text('Almacen Actual');
+        $('#cerrarSesion').text('CERRAR SESIÓN');
+    }
+
+    $('#idiomaDelSistema').click(function () {
+        toggleLanguage();
+    });
+
+    $('#idiomaDelSistema').dblclick(function () {
+        toggleLanguage();
+    });
+});

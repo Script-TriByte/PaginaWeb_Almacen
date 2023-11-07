@@ -65,7 +65,9 @@
   gap: 5px;
 }
 
-#labelAOrdenar{
+#listaArticulos, 
+#listaPaquetes, 
+#listaLotes{
   position: absolute;
   left: 20px;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,8 +17,8 @@
     <nav>
       <ul class="menu">
         <li class="cambioCursor"><a href="/">HOME</a></li>
-        <li><a href="/html/opcionesHeader/acercaDe.html">ACERCA DE</a></li>
-        <li class="cambioCursor"><a href="/html/opcionesHeader/contacto.html">CONTACTO</a></li>
+        <li><a href="/html/opcionesHeader/acercaDe.html" id="acercaDe">ACERCA DE</a></li>
+        <li class="cambioCursor"><a href="/html/opcionesHeader/contacto.html" id="contacto">CONTACTO</a></li>
         <li><div class="boton textoClaro cambioCursor divEnHeader" id="idiomaDelSistema"></div></li>
         <li><div class="boton textoClaro cambioCursor divEnHeader" id="aparienciaDelSistema"></div></li>
         <li>
@@ -27,7 +27,7 @@
             <button class="boton textoClaro">NOMBRE DEL USUARIO</button>
             <ul class="submenu">
               <li><img class="salir" id="iconoSalida" src="/img/iconoSalir.png">
-                <a href="/html/login.html">CERRAR SESIÓN</a></li>
+                <a href="/html/login.html" id="cerrarSesion">CERRAR SESIÓN</a></li>
             </ul>
           </div>
         </li>
@@ -37,19 +37,19 @@
     <div class="contenedorAccesoAListas">
         <a href="/html/aplicaciones/opcionesAlmacenes/listaArticulos.html" class="botonListado">
           <div class="cambioCursor textoClaro" id="botonListaArticulos">
-            <label class="cambioCursor" id="labelAOrdenar"><b>Lista de Artículos</b></label>
+            <label class="cambioCursor" id="listaArticulos"><b>Lista de Artículos</b></label>
             <img class="iconoBotonListado" id="iconoListadoArticulos" src="/img/iconoArticulo.png">
           </div>
         </a>
         <a href="/html/aplicaciones/opcionesAlmacenes/listaPaquetes.html" class="botonListado">
           <div class="cambioCursor textoClaro" id="botonListaPaquetes">
-            <label class="cambioCursor" id="labelAOrdenar"><b>Lista de Paquetes</b></label>
+            <label class="cambioCursor" id="listaPaquetes"><b>Lista de Paquetes</b></label>
             <img class="iconoBotonListado" id="iconoListadoPaquetes" src="/img/iconoPaquete.png">
           </div>
         </a>
         <a href="/html/aplicaciones/opcionesAlmacenes/listaLotes.html" class="botonListado">
           <div class="cambioCursor textoClaro" id="botonListaLotes">
-            <label class="cambioCursor" id="labelAOrdenar"><b>Lista de Lotes</b></label>
+            <label class="cambioCursor" id="listaLotes"><b>Lista de Lotes</b></label>
             <img class="iconoBotonListado" id="iconoListadoLotes" src="/img/iconoLote.png">
           </div>
         </a>
@@ -57,7 +57,7 @@
     <footer class="footerAlmacen textoClaro absoluto">
       <div id="contenedorUbicacionAlmacen">
         <img id="imagenUbicacionAlmacen" src="/img/iconoSeguimiento.png">
-        Almacen Actual
+        <div id="ubicacion">Almacen Actual</div>
       </div>
     </footer>
     <script src="/js/aplicacionAlmacenes.js"></script>
