@@ -6,33 +6,34 @@
     <link rel="stylesheet" href="/css/listaPaquetes.css">
     <link rel="stylesheet" href="/css/headerStyle.css">
     <link rel="stylesheet" href="/css/clasesGlobales.css">
+    <link rel="icon" href="/img/iconoPestana.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>E.L.S - Lista de Paquetes</title>
 </head>
 <body>
-    <img id="ajusteBrillo" src="/img/BGNegro.png">
-    <header class="textoClaro">
-        <a href="/"><img class="logo" src="/img/Logo del Sistema.png"></a>
-        <nav>
-          <ul class="menu">
-            <li class="cambioCursor"><a href="/">HOME</a></li>
-            <li><a href="/html/opcionesHeader/acercaDe.html">ACERCA DE</a></li>
-            <li class="cambioCursor"><a href="/html/opcionesHeader/contacto.html">CONTACTO</a></li>
-            <li><div class="boton textoClaro cambioCursor divEnHeader" id="idiomaDelSistema"></div></li>
-            <li><div class="boton textoClaro cambioCursor divEnHeader" id="aparienciaDelSistema"></div></li>
-            <li>
-              <div id="contenedorUsuario">
-                <img class="usuario" id="iconoUsuario" src="/img/iconoUsuario.png">
-                <button class="boton textoClaro">NOMBRE DEL USUARIO</button>
-                <ul class="submenu">
-                  <li><img class="salir" id="iconoSalida" src="/img/iconoSalir.png">
-                    <a href="/html/login.html">CERRAR SESIÓN</a></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </nav>
-      </header>
+  <img id="ajusteBrillo" src="/img/BGNegro.png">
+  <header class="textoClaro">
+    <a href="/"><img class="logo" src="/img/Logo del Sistema.png"></a>
+    <nav>
+      <ul class="menu">
+        <li class="cambioCursor"><a href="/">HOME</a></li>
+        <li><a href="/html/opcionesHeader/acercaDe.html" id="acercaDe">ACERCA DE</a></li>
+        <li class="cambioCursor"><a href="/html/opcionesHeader/contacto.html" id="contacto">CONTACTO</a></li>
+        <li><div class="boton textoClaro cambioCursor divEnHeader" id="idiomaDelSistema"></div></li>
+        <li><div class="boton textoClaro cambioCursor divEnHeader" id="aparienciaDelSistema"></div></li>
+        <li>
+          <div id="contenedorUsuario">
+            <img class="usuario" id="iconoUsuario" src="/img/iconoUsuario.png">
+            <button class="boton textoClaro">NOMBRE DEL USUARIO</button>
+            <ul class="submenu">
+              <li><img class="salir" id="iconoSalida" src="/img/iconoSalir.png">
+                <a href="/html/login.html" id="cerrarSesion">CERRAR SESIÓN</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
     <div class="contenedorPaquetes">
         <div class="opcionesPaquetes">
             <img src="/img/iconoAgregar.png" class="cambioCursor" id="crearPaquete">
@@ -40,12 +41,12 @@
             <form action="/" id="formularioBuscarPaquetes" method="post">
                 <input class="roboto textoClaro" id="barraDeBusqueda" name="barraDeBusqueda" placeholder="Buscar Paquete">
                 <div class="roboto textoClaro" id="contenedorFiltroDeBusqueda">
-                    <label><b>Filtro de Búsqueda:</b></label>
-                    <select class="roboto textoClaro" id="filtroDeLista" name="filtroDeLista">
-                        <option value="codigoIdentificador"><b>Código Identificador</b></option>
-                        <option value="codigoDeBulto"><b>Código de Bulto</b></option>
-                        <option value="tipoDeArticulo"><b>Tipo de Artículo</b></option>
-                    <select>
+                  <label id="filtroBusqueda"><b>Filtro de Búsqueda:</b></label>
+                  <select class="roboto textoClaro" id="filtroDeLista" name="filtroDeLista">
+                      <option value="codigoIdentificador" id="codigoIdentificador"><b>Código Identificador</b></option>
+                      <option value="codigoDeBulto" id="codigoDeBulto"><b>Código de Bulto</b></option>
+                      <option value="tipoDeArticulo" id="tipoDeArticulo"><b>Tipo de Artículo</b></option>
+                  <select>
                 </div>
                 <button type="submit" id="botonBuscar">
                     <img class="cambioCursor" id="imagenBotonBuscar" src="/img/iconoLupa.png">
@@ -57,10 +58,11 @@
     <div class="contenedorCrearPaquetes roboto textoClaro">
         <img class="cambioCursor" id="cerrarContenedorCrear" src="/img/iconoCerrar.png">
         <form action="" method="post" id="formularioCrearPaquetes">
-            <label><b>ID del Artículo: </b></label>
+          <br>
+            <label id="idArticulo"><b>ID del Artículo: </b></label>
             <input type="number" class="inputCrearPaquete textoClaro roboto" min="1" max="9999999" required>
             <br><br>
-            <label><b>Cantidad de Artículos: </b></label>
+            <label id="cantidadArticulos"><b>Cantidad de Artículos: </b></label>
             <input type="number" class="inputCrearPaquete textoClaro roboto" min="1" max="20" required>
             <br><br>
             <button type="submit" class="botonCrearPaquetes roboto textoClaro cambioCursor" id="botonCrearPaquete"><b>Embalsar Paquete</b></button>
