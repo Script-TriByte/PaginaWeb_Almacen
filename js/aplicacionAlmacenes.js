@@ -1,8 +1,3 @@
-/*
-$('#idiomaDelSistema').css('background-image', 'url(/img/banderaUK.png)');
-$('#idiomaDelSistema').css('background-image', 'url(/img/banderaUruguay.png)');
-*/
-
 import { ruta } from "./variables.js";
 
 function revelarPreviewArticulos(){
@@ -39,6 +34,16 @@ function restaurarBody(){
     $("#botonListaLotes").css("opacity", "100%");
 }
 
+    function aplicarIngles() {
+        document.cookie = "lang=en"
+        location.reload()
+      }
+      
+      function aplicarEspanol(){
+        document.cookie = "lang=es"
+        location.reload()
+      }
+
 $("#botonListaArticulos").mouseover(function() {
     revelarPreviewArticulos();
 });
@@ -63,8 +68,21 @@ $("#botonListaLotes").mouseout(function() {
     restaurarBody();
 });
 
+$('#idiomaDelSistema').click(function(){
+    if(document.cookie.indexOf("lang=en") !== -1){
+        aplicarEspanol()
+    } else {
+        aplicarIngles()
+    }
+});
+
 $(document).ready(function () {
-    Promise.all([fetch(ruta), fetch('./elementos.json')])
+    if(document.cookie.indexOf("lang=en") !== -1){
+        $('#idiomaDelSistema').css('background-image', 'url(/img/banderaUK.png)')
+    } else {
+        $('#idiomaDelSistema').css('background-image', 'url(/img/banderaUruguay.png)')
+    }
+    Promise.all([fetch(ruta), fetch('./json/elementos.json')])
     .then((responses) => Promise.all(responses.map((response) => response.json())))
     .then((data) => {
         const idioma = data[0];
@@ -77,14 +95,4 @@ $(document).ready(function () {
             texto.textContent = arrayDeIdioma[posicion]
         }
     })
-
-    function aplicarIngles() {
-        document.cookie = "lang=en"
-        location.reload()
-      }
-      
-      function aplicarEspanol(){
-        document.cookie = "lang=es"
-        location.reload()
-      }
 });

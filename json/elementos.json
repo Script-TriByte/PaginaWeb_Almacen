@@ -1,4 +1,5 @@
 [{
-    "0": "label1",
-    "1": "label2"
+    "0": "listaArticulos",
+    "1": "listaPaquetes",
+    "2": "listaLotes"
 }]
