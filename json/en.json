@@ -1,9 +1,44 @@
 [{
-  "0": "List of Articules",
+  "0": "List of Articles",
   "1": "List of Packages",
   "2": "List of Lots",
   "3": "ABOUT",
   "4": "CONTACT",
-  "5": "LOG OUT",
-  "6": "Current Warehouse"
-}]
+  "5": "LOG OUT"
+},
+{
+  "0": "ABOUT",
+  "1": "CONTACT",
+  "2": "LOG OUT"
+},
+{
+  "0": "ABOUT",
+  "1": "CONTACT",
+  "2": "LOG OUT",
+  "3": "Search Lot",
+  "4": "Search Filter: ",
+  "5": "Identifier Code",
+  "6": "Package Code",
+  "7": "Article Type",
+  "8": "Lot ID: ",
+  "9": "Number of Packages: ",
+  "10": "Destination: ",
+  "11": "Store: ",
+  "12": "Embalm Lot",
+  "13": "Delete Assembly"
+},
+{
+  "0": "ABOUT",
+  "1": "CONTACT",
+  "2": "LOG OUT",
+  "3": "Search Package",
+  "4": "Search Filter: ",
+  "5": "Identifier Code",
+  "6": "Package Code",
+  "7": "Article Type",
+  "8": "Article ID: ",
+  "9": "Quantity of Items: ",
+  "10": "Embal Package",
+  "11": "Cancel Arming"
+}
+]

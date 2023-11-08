@@ -4,6 +4,41 @@
     "2": "listaLotes",
     "3": "acercaDe",
     "4": "contacto",
-    "5": "cerrarSesion",
-    "6": "ubicacion"
-}]
+    "5": "cerrarSesion"
+},
+{
+    "0": "acercaDe",
+    "1": "contacto",
+    "2": "cerrarSesion"
+},
+{
+    "0": "acercaDe",
+    "1": "contacto",
+    "2": "cerrarSesion",
+    "3": "barraDeBusqueda",
+    "4": "filtroBusqueda",
+    "5": "codigoIdentificador",
+    "6": "codigoDeBulto",
+    "7": "tipoDeArticulo",
+    "8": "idLote",
+    "9": "cantidadPaquetes",
+    "10": "destino",
+    "11": "almacen",
+    "12": "botonCrearLote",
+    "13": "eliminarArmado"
+},
+{
+    "0": "acercaDe",
+    "1": "contacto",
+    "2": "cerrarSesion",
+    "3": "barraDeBusqueda",
+    "4": "filtroBusqueda",
+    "5": "codigoIdentificador",
+    "6": "codigoDeBulto",
+    "7": "tipoDeArticulo",
+    "8": "idArticulo",
+    "9": "cantidadArticulos",
+    "10": "botonCrearPaquete",
+    "11": "cancelarArmado"
+}
+]

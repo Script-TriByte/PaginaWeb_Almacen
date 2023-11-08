@@ -1,9 +1,43 @@
 [{
-  "0": "Lista de Articulos",
+  "0": "Lista de Artículos",
   "1": "Lista de Paquetes",
   "2": "Lista de Lotes",
   "3": "ACERCA DE",
   "4": "CONTACTO",
-  "5": "CERRAR SESIÓN",
-  "6": "Almacen Actual"
+  "5": "CERRAR SESIÓN"
+},
+{
+  "0": "ACERCA DE",
+  "1": "CONTACTO",
+  "2": "CERRAR SESIÓN"
+},
+{
+  "0": "ACERCA DE",
+  "1": "CONTACTO",
+  "2": "CERRAR SESIÓN",
+  "3": "Buscar Lote",
+  "4": "Filtro de Búsqueda: ",
+  "5": "Código Identificador",
+  "6": "Código de Bulto",
+  "7": "Tipo de Artículo",
+  "8": "ID del Lote: ",
+  "9": "Cantidad de Paquetes: ",
+  "10": "Destino: ",
+  "11": "Almacén: ",
+  "12": "Embalsar Lote",
+  "13": "Eliminar Armado"
+},
+{
+  "0": "ACERCA DE",
+  "1": "CONTACTO",
+  "2": "CERRAR SESIÓN",
+  "3": "Buscar Paquete",
+  "4": "Filtro de Búsqueda: ",
+  "5": "Código Identificador",
+  "6": "Código de Bulto",
+  "7": "Tipo de Artículo",
+  "8": "ID del Artículo: ",
+  "9": "Cantidad de Artículos: ",
+  "10": "Embalsar Paquete",
+  "11": "Cancelar Armado"
 }]
