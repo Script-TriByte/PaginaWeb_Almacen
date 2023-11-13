@@ -4,58 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Script TriByte">
-    <link rel="stylesheet" href="/css/clasesGlobales.css">
     <link rel="stylesheet" href="/css/headerStyle.css">
+    <link rel="stylesheet" href="/css/clasesGlobales.css">
     <link rel="stylesheet" href="/css/listaArticulos.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="icon" href="/img/iconoPestana.png">
-    <title>E.L.S - Lista de Artículos</title>
+    <link rel="icon" type="image/png" href="/img/iconoPestana.png">
+    <title>E.L.S - Artículos</title>
 </head>
 <body>
-  <header class="textoClaro">
+<img id="ajusteBrillo" src="/img/BGNegro.png">
+<header class="textoClaro">
     <a href="/"><img class="logo" src="/img/Logo del Sistema.png"></a>
     <nav>
-      <ul class="menu">
+    <ul class="menu">
         <li class="cambioCursor"><a href="/">HOME</a></li>
         <li><a href="/html/opcionesHeader/acercaDe.html" id="acercaDe">ACERCA DE</a></li>
         <li class="cambioCursor"><a href="/html/opcionesHeader/contacto.html" id="contacto">CONTACTO</a></li>
         <li><div class="boton textoClaro cambioCursor divEnHeader" id="idiomaDelSistema"></div></li>
         <li><div class="boton textoClaro cambioCursor divEnHeader" id="aparienciaDelSistema"></div></li>
         <li>
-          <div id="contenedorUsuario">
+        <div id="contenedorUsuario">
             <img class="usuario" id="iconoUsuario" src="/img/iconoUsuario.png">
             <button class="boton textoClaro">NOMBRE DEL USUARIO</button>
             <ul class="submenu">
-              <li><img class="salir" id="iconoSalida" src="/img/iconoSalir.png">
+            <li><img class="salir" id="iconoSalida" src="/img/iconoSalir.png">
                 <a href="/html/login.html" id="cerrarSesion">CERRAR SESIÓN</a></li>
             </ul>
-          </div>
+        </div>
         </li>
-      </ul>
+    </ul>
     </nav>
-  </header>
-  <div id="contenedorArticulos">
-    <table id="informacionArticulos">
-      <tr>
-        <th>ID</th>
-        <th id="thNombre">Nombre</th>
-        <th id="thAnio">Año de creación</th>
-        <th></th>
-      </tr>
-    </table>
-  </div>
-  <div id="contenedorCrearArticulo">
+</header>
 
-  </div>
-  <div id="contenedorModificarArticulo">
+<div class="contenedorArticulos">
+        <div class="opcionesArticulos">
+            <img src="/img/iconoAgregar.png" class="cambioCursor" id="crearArticulo">
+            <label class="textoClaro"><b>|</b></label>
+            <form action="api/v1/articulos/buscar" id="formularioBuscarArticulo" method="post">
+                <input class="roboto textoClaro" id="barraDeBusqueda" name="barraDeBusqueda" placeholder="Buscar Artículo">
+                <div class="roboto textoClaro" id="contenedorFiltroDeBusqueda">
+                    <label id="filtroBusqueda"><b>Filtro de Búsqueda:</b></label>
+                    <select class="roboto textoClaro" id="filtroDeLista" name="filtroDeLista">
+                        <option id="idArticulo" value="idArticulo"><b>ID Artículo</b></option>
+                        <option value="idTipo" id="idTipo"><b>ID Tipo</b></option>
+                    <select>
+                </div>
+                <button type="submit" id="botonBuscar">
+                    <img class="cambioCursor" id="imagenBotonBuscar" src="/img/iconoLupa.png">
+                </button>
+            </form>
+        </div>
+        <hr>
+    </div>
 
-  </div>
-  <div id="contenedorEliminarArticulo">
+    <div class="contenedorCrearArticulo roboto textoClaro" id="contenedorCrear">
+    <img class="cambioCursor" id="cerrarContenedorCrear" src="/img/iconoCerrar.png">
+        <form action='api/v2/articulos' method='POST' id="formularioCrearArticulos">
+            @csrf
+            <br>
+            <label id="nombre">Nombre: </label>
+            <input class="inputCrearArticulo textoClaro roboto" type="text" name="nombre" required>
+            <br><br>
+            <label id="anioCreacion">Año de creación: </label>
+            <input class="inputCrearArticulo textoClaro roboto" type="number" name="anioCreacion" min="2000" max="9999" required>
+            <br><br>
+            <label id="tipoArticulo">Tipo de Artículo: </label>
+            <input class="inputCrearArticulo textoClaro roboto" type="text" name="tipo" min="1" max="1" required>
+            <br><br>
+            <button class="botonCrearArticulo roboto textoClaro cambioCursor" type="submit" id="botonCrearArticulo">Crear</button>
+        </form>
+    </div>
 
-  </div>
-  <div id="contenedorTiposDeArticulo">
+    <div class="contenedor">
+    <img src="/img/iconoEditar.png" class="cambioCursor" id="imagenBotonEditar" title="Editar Artículo">
+    <img src="/img/iconoEliminar.png" class="cambioCursor" id="imagenBotonEliminar" title="Eliminar Artículo">
+    </div>
 
-  </div>
+    <div class="ArticuloAModificar roboto textoClaro" id="contenedorModificar">
+    <img class="cambioCursor" id="cerrarContenedorModificar" src="/img/iconoCerrar.png">
+        <form id="formularioModificarArticulos" action='api/v2/articulos' method='POST'>
+            @method('PUT')
+            @csrf
+            <br>
+            <label id="articuloID">ID del artículo: </label>
+            <input class="inputModificarArticulo textoClaro roboto" id="inputIDArticuloModificar" type="number" name="idArticulo" required>
+            <br><br>
+            <label id="nom">Nombre: </label>
+            <input class="inputModificarArticulo textoClaro roboto" type="text" name="nombre" required>
+            <br><br>
+            <button class="botonModificarArticulo roboto textoClaro cambioCursor" type="submit" id="modificar">Modificar</button>
+        </form>
+    </div>
+    
+    <div class="ArticuloAEliminar roboto textoClaro" id="contenedorEliminar">
+    <img class="cambioCursor" id="cerrarContenedorEliminar" src="/img/iconoCerrar.png">
+        <form id="formularioEliminarArticulos" action='api/v2/articulos' method='POST'>
+            @method('DELETE')
+            @csrf
+            <br>
+            <label id="artID">ID del artículo: </label>
+            <input class="inputEliminarArticulo textoClaro roboto" id="inputIDArticuloEliminar" type="number" name="idArticulo" required>
+            <br><br>
+            <button class="botonEliminarArticulo roboto textoClaro cambioCursor" id="botonFormularioEliminarArticulos" type="submit">Eliminar</button>
+        </form>
+    </div>
   <div id="contenedorMensajeDeError">
     <label class="textoClaro" id="mensajeDeError"></label>
   </div>
