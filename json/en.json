@@ -9,7 +9,10 @@
 {
   "0": "ABOUT",
   "1": "CONTACT",
-  "2": "LOG OUT"
+  "2": "LOG OUT",
+  "3": "Name",
+  "4": "Year of creation",
+  "5": "Could not connect to the server. Try it later."
 },
 {
   "0": "ABOUT",

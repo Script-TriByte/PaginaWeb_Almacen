@@ -9,7 +9,10 @@
 {
   "0": "ACERCA DE",
   "1": "CONTACTO",
-  "2": "CERRAR SESIÓN"
+  "2": "CERRAR SESIÓN",
+  "3": "Nombre",
+  "4": "Año de creación",
+  "5": "No se ha podido conectar al servidor. Inténtelo más tarde."
 },
 {
   "0": "ACERCA DE",

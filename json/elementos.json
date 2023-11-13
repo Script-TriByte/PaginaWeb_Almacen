@@ -9,7 +9,10 @@
 {
     "0": "acercaDe",
     "1": "contacto",
-    "2": "cerrarSesion"
+    "2": "cerrarSesion",
+    "3": "thNombre",
+    "4": "thAnio",
+    "5": "mensajeDeError"
 },
 {
     "0": "acercaDe",
