@@ -187,3 +187,63 @@ label{
     align-items: center;
     font-size: 30px;
 }
+
+@media screen and (max-width: 768px) {
+    .contenedorArticulos{
+        position:absolute;
+        left: 26%;
+        width: 46%;
+    }
+
+    #contenedorFiltroDeBusqueda{
+        font-size: 8px;
+    }
+
+    select{
+        font-size: 10px;
+    }
+
+    input{
+        width: 35%;
+        font-size: 10px;
+    }
+
+    .contenedor{
+        width: 46%;
+        left: 26%;
+    }
+
+}
+
+@media screen and (max-width: 320px){
+    
+    #botonBuscar{
+        top:40%;
+    }
+
+    select{
+        margin-top: 45%;
+        height: 5%;
+        width: 100%;
+    }
+
+    #filtroBusqueda{
+        position: absolute;
+        top: 35%;
+    }
+
+    input{
+        position:absolute;
+        top: 10%;
+        width: 50%;
+    }
+
+    #botonBuscar{
+        position: absolute;
+        left: 70%;
+    }
+
+    .contenedor{
+        width: 45%;
+    }
+}
