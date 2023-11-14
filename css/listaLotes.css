@@ -6,12 +6,13 @@
     opacity: 70%;
     z-index: 1;
     width: 100%;
+    height: 100%;
 }
 
 .contenedorCrearLotes{
     display: none;
     position: absolute;
-    top: calc(50% - 100px);
+    top: 10%;
     left: calc(50% - 250px);
     z-index: 2;
     background-color: #4a0913;
@@ -134,4 +135,68 @@ option{
 
 label{
     font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .contenedorLotes{
+        position:absolute;
+        left: 26%;
+        width: 46%;
+    }
+
+    #contenedorFiltroDeBusqueda{
+        font-size: 8px;
+    }
+
+    select{
+        font-size: 10px;
+    }
+
+    input{
+        width: 35%;
+        font-size: 10px;
+    }
+
+    .contenedorCrearLotes{
+        top:15%;
+    }
+
+}
+
+@media screen and (max-width: 320px){
+
+    select{
+        margin-top: 45%;
+        height: 5%;
+        width: 100%;
+    }
+
+    #filtroBusqueda{
+        position: absolute;
+        top: 35%;
+    }
+
+    input{
+        position:absolute;
+        top: 10%;
+        width: 50%;
+    }
+
+    #botonBuscar{
+        position: absolute;
+        left: 70%;
+        margin-left: 15px;
+    }
+
+    .contenedorCrearLotes{
+        left: 1%;
+        width: 83%;
+        height: 80%;
+        top: 10%;
+    }
+
+    .inputCrearLote{
+        flex-direction: column;
+        position: relative;
+    }
 }
