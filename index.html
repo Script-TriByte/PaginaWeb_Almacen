@@ -23,7 +23,6 @@
         <li><a href="/html/opcionesHeader/acercaDe.html" id="acercaDe">ACERCA DE</a></li>
         <li class="cambioCursor"><a href="/html/opcionesHeader/contacto.html" id="contacto">CONTACTO</a></li>
         <li><div class="boton textoClaro cambioCursor divEnHeader" id="idiomaDelSistema"></div></li>
-        <li><div class="boton textoClaro cambioCursor divEnHeader" id="aparienciaDelSistema"></div></li>
         <li>
           <div id="contenedorUsuario">
             <img class="usuario" id="iconoUsuario" src="/img/iconoUsuario.png">
@@ -37,10 +36,10 @@
       </ul>
     </nav>
     <script>
-      function menu() {
-      var menu = document.querySelector('nav ul');
-      menu.classList.toggle('active');
-}
+        function menu() {
+          var menu = document.querySelector('nav ul');
+          menu.classList.toggle('active');
+        }
     </script>
   </header>
     <div class="contenedorAccesoAListas">
@@ -60,6 +59,12 @@
           <div class="cambioCursor textoClaro" id="botonListaLotes">
             <label class="cambioCursor" id="listaLotes"><b>Lista de Lotes</b></label>
             <img class="iconoBotonListado" id="iconoListadoLotes" src="/img/iconoLote.png">
+          </div>
+        </a>
+        <a href="/html/aplicaciones/opcionesAlmacenes/listaTiposArticulo.html" class="botonListado">
+          <div class="cambioCursor textoClaro" id="botonListaTiposArticulo">
+            <label class="cambioCursor" id="listaTiposArticulo"><b>Lista Tipos Artíc.</b></label>
+            <img class="iconoBotonListado" id="iconoListadoTiposArticulo" src="/img/iconoPaquete.png">
           </div>
         </a>
     </div>

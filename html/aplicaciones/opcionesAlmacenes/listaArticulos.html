@@ -16,7 +16,7 @@
 <header class="textoClaro">
     <a href="/"><img class="logo" src="/img/Logo del Sistema.png"></a>
     <nav>
-    <div class="menu-icon" onclick="menu()">
+        <div class="menu-icon" onclick="menu()">
             <img src="/img/iconoMenu.png" alt="Menú">
         </div>
       <ul class="menu">
@@ -68,8 +68,7 @@
 
     <div class="contenedorCrearArticulo roboto textoClaro" id="contenedorCrear">
     <img class="cambioCursor" id="cerrarContenedorCrear" src="/img/iconoCerrar.png">
-        <form action='api/v2/articulos' method='POST' id="formularioCrearArticulos">
-            @csrf
+        <form id="formularioCrearArticulos">
             <br>
             <label id="nombre">Nombre: </label>
             <input class="inputCrearArticulo textoClaro roboto" type="text" name="nombre" required>
@@ -84,9 +83,16 @@
         </form>
     </div>
 
-    <div class="contenedor">
-    <img src="/img/iconoEditar.png" class="cambioCursor" id="imagenBotonEditar" title="Editar Artículo">
-    <img src="/img/iconoEliminar.png" class="cambioCursor" id="imagenBotonEliminar" title="Eliminar Artículo">
+    <div id="contenedorArticulos">
+      <table id="informacionArticulos">
+        <tr>
+          <th class="bordeInferior">ID</th>
+          <th class="bordeInferior" id="thNombre">Nombre</th>
+          <th class="bordeInferior" id="thAnio">Año de creación</th>
+          <th></th>
+        </tr>
+      </table>
+      <label id="mensajeInformacion"></label>
     </div>
 
     <div class="ArticuloAModificar roboto textoClaro" id="contenedorModificar">

@@ -12,7 +12,15 @@
     "2": "cerrarSesion",
     "3": "thNombre",
     "4": "thAnio",
-    "5": "mensajeDeError"
+    "5": "mensajeDeError",
+    "6": "mensajeInformacion",
+    "7": "filtroBusqueda",
+    "8": "idArticulo",
+    "9": "idTipo",
+    "10": "barraDeBusqueda",
+    "11": "nombre",
+    "12": "anioCreacion",
+    "13": "tipoArticulo"
 },
 {
     "0": "acercaDe",

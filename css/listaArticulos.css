@@ -1,16 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-#ajusteBrillo{
-    display: none;
-    position: fixed;
-    left: 0%;
-    top: 0%;
-    opacity: 70%;
-    z-index: 1;
-    width: 100%;
-    
-}
-
 body{
     background-image: url(/img/BGArticuloListado.png);
 }
@@ -142,6 +131,28 @@ option{
     font-size: 20px;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+#mensajeInformacion{
+    display: none;
+}
+
+#contenedorArticulos{
+    height: fit-content;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    scale: 200%;
+    position: absolute;
+    left: 15%;
+    top: 40%;
+    flex-direction: column;
+    color: #fddfb5;
+}
+
+.bordeInferior{
+    border-bottom: solid 2px #fddfb5;
 }
 
 .contenedor{

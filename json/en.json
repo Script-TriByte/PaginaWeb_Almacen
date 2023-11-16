@@ -12,7 +12,15 @@
   "2": "LOG OUT",
   "3": "Name",
   "4": "Year of creation",
-  "5": "Could not connect to the server. Try it later."
+  "5": "Could not connect to the server. Try it later.",
+  "6": "No articles to list.",
+  "7": "Search filter: ",
+  "8": "Article ID",
+  "9": "Type ID",
+  "10": "Search Article",
+  "11": "Name",
+  "12": "Year of creation",
+  "13": "Article Type"
 },
 {
   "0": "ABOUT",

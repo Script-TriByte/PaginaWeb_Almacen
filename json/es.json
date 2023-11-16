@@ -12,7 +12,15 @@
   "2": "CERRAR SESIÓN",
   "3": "Nombre",
   "4": "Año de creación",
-  "5": "No se ha podido conectar al servidor. Inténtelo más tarde."
+  "5": "No se ha podido conectar al servidor. Inténtelo más tarde.",
+  "6": "No hay artículos para listar.",
+  "7": "Filtro de búsqueda: ",
+  "8": "ID Artículo",
+  "9": "ID Tipo de Artículo",
+  "10": "Buscar Artículo",
+  "11": "Nombre",
+  "12": "Año de creación",
+  "13": "Tipo de Artículo"
 },
 {
   "0": "ACERCA DE",
