@@ -37,6 +37,58 @@ $('#idiomaDelSistema').click(function(){
     }
 });
 
+function listarLotes(){
+    fetch(urlAPIAlmacenes + '/api/v3/lotes', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        const cuerpoDeLaTabla = document.getElementById('informacionLotes');
+
+        if (data != null) {
+            data.forEach(item => {
+                const fila = document.createElement('tr');
+                fila.innerHTML = `
+                  <td>${item.idLote}</td>
+                  <td>${item.cantidadPaquetes}</td>
+                  <td>${item.idDestino}</td>
+                  <td>${item.idAlmacen}</td>
+                  <td><button class="botonMasInfo cambioCursor" id="imagenBotonEditar" title="Editar Lote" value="${item.idLote}"></button></td>
+                  <td><button class="botonMasInfo cambioCursor" id="imagenBotonEliminar" title="Eliminar Lote" value="${item.idLote}"></button></td>
+                `;
+                cuerpoDeLaTabla.appendChild(fila);
+            });
+        } 
+        if (Array.isArray(data) && data.length === 0) {
+            $('#mensajeInformacion').show();
+        }
+    })
+    .catch(error => {
+        document.getElementById('contenedorLotes').style.display = "none";
+        contenedorMensajeDeError.style.display = "Block";
+    })
+}
+
+function crearLote(formData) {
+    fetch(urlAPIAlmacenes + '/api/v3/lote', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status == 200 || data.status == 201) {
+            return location.reload();
+        }
+        throw new Error(data.mensaje)
+    })
+    .catch(error => {
+        alert(error);
+    });
+}
+
 $(document).ready(function () {
     if(document.cookie.indexOf("lang=en") !== -1){
         $('#idiomaDelSistema').css('background-image', 'url(/img/banderaUK.png)')
@@ -60,5 +112,11 @@ $(document).ready(function () {
             }
         }
     })
+    listarLotes()
+});
 
+document.getElementById("formularioCrearLotes").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+    crearLote(formData)
 });

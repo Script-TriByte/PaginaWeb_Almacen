@@ -36,7 +36,8 @@
     "10": "destino",
     "11": "almacen",
     "12": "botonCrearLote",
-    "13": "eliminarArmado"
+    "13": "eliminarArmado",
+    "14": "mensajeInformacion"
 },
 {
     "0": "acercaDe",
