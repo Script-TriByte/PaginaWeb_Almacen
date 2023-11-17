@@ -37,6 +37,57 @@ $('#idiomaDelSistema').click(function(){
     }
 });
 
+function listarPaquetes(){
+    fetch(urlAPIAlmacenes + '/api/v3/paquetes', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        const cuerpoDeLaTabla = document.getElementById('informacionPaquetes');
+
+        if (data != null) {
+            data.forEach(item => {
+                const fila = document.createElement('tr');
+                fila.innerHTML = `
+                  <td>${item.idLote}</td>
+                  <td>${item.cantidadArticulos}</td>
+                  <td>${item.Peso}</td>
+                  <td><button class="botonMasInfo cambioCursor" id="imagenBotonEditar" title="Editar Paquete" value="${item.idPaquete}"></button></td>
+                  <td><button class="botonMasInfo cambioCursor" id="imagenBotonEliminar" title="Eliminar Paquete" value="${item.idPaquete}"></button></td>
+                `;
+                cuerpoDeLaTabla.appendChild(fila);
+            });
+        } 
+        if (Array.isArray(data) && data.length === 0) {
+            $('#mensajeInformacion').show();
+        }
+    })
+    .catch(error => {
+        document.getElementById('contenedorPaquetes').style.display = "none";
+        contenedorMensajeDeError.style.display = "Block";
+    })
+}
+
+function crearPaquete(formData) {
+    fetch(urlAPIAlmacenes + '/api/v3/paquete', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status == 200 || data.status == 201) {
+            return location.reload();
+        }
+        throw new Error(data.mensaje)
+    })
+    .catch(error => {
+        alert(error);
+    });
+}
+
 $(document).ready(function () {
     if(document.cookie.indexOf("lang=en") !== -1){
         $('#idiomaDelSistema').css('background-image', 'url(/img/banderaUK.png)')
@@ -60,5 +111,11 @@ $(document).ready(function () {
             }
         }
     })
+    listarPaquetes()
+});
 
+$document.getElementById("formularioCrearPaquetes").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+    crearLote(formData)
 });

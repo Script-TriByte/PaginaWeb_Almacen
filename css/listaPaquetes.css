@@ -200,3 +200,7 @@ label{
         position: relative;
     }
 }
+
+#mensajeInformacion{
+    display: none;
+}
