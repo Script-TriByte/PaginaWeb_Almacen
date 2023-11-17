@@ -4,32 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Script TriByte">
-    <link rel="stylesheet" href="/css/headerStyle.css">
-    <link rel="stylesheet" href="/css/clasesGlobales.css">
-    <link rel="stylesheet" href="/css/listaArticulos.css">
+    <link rel="stylesheet" href="../../../css/headerStyle.css">
+    <link rel="stylesheet" href="../../../css/clasesGlobales.css">
+    <link rel="stylesheet" href="../../../css/listaArticulos.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="icon" type="image/png" href="/img/iconoPestana.png">
+    <link rel="icon" type="image/png" href="../../../img/iconoPestana.png">
     <title>E.L.S - Artículos</title>
 </head>
 <body>
-<img id="ajusteBrillo" src="/img/BGNegro.png">
+<img id="ajusteBrillo" src="../../../img/BGNegro.png">
 <header class="textoClaro">
-    <a href="/"><img class="logo" src="/img/Logo del Sistema.png"></a>
+    <a href="/"><img class="logo" src="../../../img/Logo del Sistema.png"></a>
     <nav>
         <div class="menu-icon" onclick="menu()">
-            <img src="/img/iconoMenu.png" alt="Menú">
+            <img src="../../../img/iconoMenu.png" alt="Menú">
         </div>
       <ul class="menu">
         <li class="cambioCursor"><a href="/">HOME</a></li>
-        <li><a href="/html/opcionesHeader/acercaDe.html" id="acercaDe">ACERCA DE</a></li>
-        <li class="cambioCursor"><a href="/html/opcionesHeader/contacto.html" id="contacto">CONTACTO</a></li>
+        <li><a href="../../../html/opcionesHeader/acercaDe.html" id="acercaDe">ACERCA DE</a></li>
+        <li class="cambioCursor"><a href="../../../html/opcionesHeader/contacto.html" id="contacto">CONTACTO</a></li>
         <li><div class="boton textoClaro cambioCursor divEnHeader" id="idiomaDelSistema"></div></li>
         <li>
           <div id="contenedorUsuario">
-            <img class="usuario" id="iconoUsuario" src="/img/iconoUsuario.png">
+            <img class="usuario" id="iconoUsuario" src="../../../img/iconoUsuario.png">
             <button class="boton textoClaro">NOMBRE DEL USUARIO</button>
             <ul class="submenu">
-              <li><img class="salir" id="iconoSalida" src="/img/iconoSalir.png">
+              <li><img class="salir" id="iconoSalida" src="../../../img/iconoSalir.png">
                 <a href="/html/login.html" id="cerrarSesion">CERRAR SESIÓN</a></li>
             </ul>
           </div>
@@ -46,7 +46,7 @@
 
 <div class="contenedorArticulos">
         <div class="opcionesArticulos">
-            <img src="/img/iconoAgregar.png" class="cambioCursor" id="crearArticulo">
+            <img src="../../../img/iconoAgregar.png" class="cambioCursor" id="crearArticulo">
             <label class="textoClaro"><b>|</b></label>
             <form id="formularioBuscarArticulo">
                 <input class="roboto textoClaro" id="barraDeBusqueda" name="barraDeBusqueda" placeholder="Buscar Artículo">
@@ -58,7 +58,7 @@
                     <select>
                 </div>
                 <button type="submit" id="botonBuscar">
-                    <img class="cambioCursor" id="imagenBotonBuscar" src="/img/iconoLupa.png">
+                    <img class="cambioCursor" id="imagenBotonBuscar" src="../../../img/iconoLupa.png">
                 </button>
             </form>
         </div>
@@ -66,7 +66,7 @@
     </div>
 
     <div class="contenedorCrearArticulo roboto textoClaro" id="contenedorCrear">
-    <img class="cambioCursor" id="cerrarContenedorCrear" src="/img/iconoCerrar.png">
+    <img class="cambioCursor" id="cerrarContenedorCrear" src="../../../img/iconoCerrar.png">
         <form id="formularioCrearArticulos">
             <br>
             <label id="nombre">Nombre: </label>
@@ -95,13 +95,13 @@
     </div>
 
     <div id="contenedorTiposDeArticulo">
-      <img class="cambioCursor" id="cerrarContenedorTipos" src="/img/iconoCerrar.png">
+      <img class="cambioCursor" id="cerrarContenedorTipos" src="../../../img/iconoCerrar.png">
       <label id="obtenerTipos">Tipos del Artículo: </label>
       <br>
     </div>
 
     <div class="ArticuloAModificar roboto textoClaro" id="contenedorModificar">
-    <img class="cambioCursor" id="cerrarContenedorModificar" src="/img/iconoCerrar.png">
+    <img class="cambioCursor" id="cerrarContenedorModificar" src="../../../img/iconoCerrar.png">
         <form id="formularioModificarArticulos">
             <br>
             <label id="nom">Nuevo nombre: </label>
@@ -114,7 +114,7 @@
   <div id="contenedorMensajeDeError">
     <label class="textoClaro" id="mensajeDeError"></label>
   </div>
-  <script type="module" src="/js/listaArticulos.js"></script>
-  <script type="module" src="/js/variables.js"></script>
+  <script type="module" src="../../../js/listaArticulos.js"></script>
+  <script type="module" src="../../../js/variables.js"></script>
 </body>
 </html>

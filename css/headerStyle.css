@@ -73,7 +73,7 @@ a{
 }
 
 #idiomaDelSistema{
-    background-image: url(../img/banderaUruguay.png);
+    background-image: url(./img/banderaUruguay.png);
     width: 25px;
     height: 17px;
     background-size: cover;
@@ -83,13 +83,6 @@ a{
   
 #idiomaDelSistema:hover{
     opacity: 100%;
-}
-  
-#aparienciaDelSistema{
-    background-image: url(../img/iconoModoOscuro.png);
-    width: 25px;
-    height: 25px;
-    background-size: cover;
 }
 
 .divEnHeader{

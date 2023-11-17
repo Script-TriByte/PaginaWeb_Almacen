@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
 body{
-    background-image: url(/img/BGArticuloListado.png);
+    background-image: url(../../img/BGArticuloListado.png);
 }
 
 .contenedorArticulos{
@@ -39,7 +37,7 @@ body{
 }
 
 .botonEditar{
-    background-image: url(/img/iconoEditar.png);
+    background-image: url(../img/iconoEditar.png);
     background-size: cover;
     border: none;
     width: 20px;
@@ -48,7 +46,7 @@ body{
 }
 
 .botonEliminar{
-    background-image: url(/img/iconoEliminar.png);
+    background-image: url(../img/iconoEliminar.png);
     background-size: cover;
     border: none;
     width: 20px;
@@ -63,7 +61,7 @@ body{
 
 #crearArticulo{
     display: inline;
-    background-image: url(/img/iconoAgregar.png);
+    background-image: url(../img/iconoAgregar.png);
     background-size: cover;
     width: 20px;
     height: 20px;

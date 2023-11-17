@@ -4,33 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Script TriByte">
-    <link rel="stylesheet" href="/css/appAlmacenes.css">
-    <link rel="stylesheet" href="/css/headerStyle.css">
-    <link rel="stylesheet" href="/css/clasesGlobales.css">
+    <link rel="stylesheet" href="./css/appAlmacenes.css">
+    <link rel="stylesheet" href="./css/headerStyle.css">
+    <link rel="stylesheet" href="./css/clasesGlobales.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="icon" href="/img/iconoPestana.png">
+    <link rel="icon" href="./img/iconoPestana.png">
     <title>E.L.S - Informacion del Almacén</title>
 </head>
 <body>
-  <img id="ajusteBrillo" src="/img/BGNegro.png">
+  <img id="ajusteBrillo" src="./img/BGNegro.png">
   <header class="textoClaro">
-    <a href="/"><img class="logo" src="/img/Logo del Sistema.png"></a>
+    <a href="/"><img class="logo" src="./img/Logo del Sistema.png"></a>
     <nav>
     <div class="menu-icon" onclick="menu()">
-            <img src="/img/iconoMenu.png" alt="Menú">
+            <img src="./img/iconoMenu.png" alt="Menú">
         </div>
       <ul class="menu">
-        <li class="cambioCursor"><a href="/">HOME</a></li>
-        <li><a href="/html/opcionesHeader/acercaDe.html" id="acercaDe">ACERCA DE</a></li>
+        <li class="cambioCursor"><a href="../../scripttribyte/">HOME</a></li>
+        <li><a href="./html/opcionesHeader/acercaDe.html" id="acercaDe">ACERCA DE</a></li>
         <li class="cambioCursor"><a href="/html/opcionesHeader/contacto.html" id="contacto">CONTACTO</a></li>
         <li><div class="boton textoClaro cambioCursor divEnHeader" id="idiomaDelSistema"></div></li>
         <li>
           <div id="contenedorUsuario">
-            <img class="usuario" id="iconoUsuario" src="/img/iconoUsuario.png">
+            <img class="usuario" id="iconoUsuario" src="./img/iconoUsuario.png">
             <button class="boton textoClaro">NOMBRE DEL USUARIO</button>
             <ul class="submenu">
-              <li><img class="salir" id="iconoSalida" src="/img/iconoSalir.png">
-                <a href="/html/login.html" id="cerrarSesion">CERRAR SESIÓN</a></li>
+              <li><img class="salir" id="iconoSalida" src="./img/iconoSalir.png">
+                <a href="./html/login.html" id="cerrarSesion">CERRAR SESIÓN</a></li>
             </ul>
           </div>
         </li>
@@ -44,36 +44,36 @@
     </script>
   </header>
     <div class="contenedorAccesoAListas">
-        <a href="/html/aplicaciones/opcionesAlmacenes/listaArticulos.html" class="botonListado">
+        <a href="./html/aplicaciones/opcionesAlmacenes/listaArticulos.html" class="botonListado">
           <div class="cambioCursor textoClaro" id="botonListaArticulos">
             <label class="cambioCursor" id="listaArticulos"><b>Lista de Artículos</b></label>
-            <img class="iconoBotonListado" id="iconoListadoArticulos" src="/img/iconoArticulo.png">
+            <img class="iconoBotonListado" id="iconoListadoArticulos" src="./img/iconoArticulo.png">
           </div>
         </a>
-        <a href="/html/aplicaciones/opcionesAlmacenes/listaPaquetes.html" class="botonListado">
+        <a href="./html/aplicaciones/opcionesAlmacenes/listaPaquetes.html" class="botonListado">
           <div class="cambioCursor textoClaro" id="botonListaPaquetes">
             <label class="cambioCursor" id="listaPaquetes"><b>Lista de Paquetes</b></label>
-            <img class="iconoBotonListado" id="iconoListadoPaquetes" src="/img/iconoPaquete.png">
+            <img class="iconoBotonListado" id="iconoListadoPaquetes" src="./img/iconoPaquete.png">
           </div>
         </a>
-        <a href="/html/aplicaciones/opcionesAlmacenes/listaLotes.html" class="botonListado">
+        <a href="./html/aplicaciones/opcionesAlmacenes/listaLotes.html" class="botonListado">
           <div class="cambioCursor textoClaro" id="botonListaLotes">
             <label class="cambioCursor" id="listaLotes"><b>Lista de Lotes</b></label>
-            <img class="iconoBotonListado" id="iconoListadoLotes" src="/img/iconoLote.png">
+            <img class="iconoBotonListado" id="iconoListadoLotes" src="./img/iconoLote.png">
           </div>
         </a>
         <div class="cambioCursor textoClaro botonListado" id="botonTiposArticulos">
             <label class="cambioCursor" id="tiposArticulos"><b>Crear Tipo de Artíc.</b></label>
-            <img class="iconoBotonListado" id="iconoTiposArticulos" src="/img/iconoPaquete.png">
+            <img class="iconoBotonListado" id="iconoTiposArticulos" src="./img/iconoPaquete.png">
         </div>
         <div class="cambioCursor textoClaro botonListado" id="botonDestinos">
           <label class="cambioCursor" id="destinos"><b>Añadir destino</b></label>
-          <img class="iconoBotonListado" id="iconoDestinos" src="/img/iconoSeguimiento.png">
+          <img class="iconoBotonListado" id="iconoDestinos" src="./img/iconoSeguimiento.png">
       </div>
     </div>
 
     <div class="roboto textoClaro" id="contenedorCrearTipos">
-      <img class="cambioCursor" id="cerrarContenedorCrear" src="/img/iconoCerrar.png">
+      <img class="cambioCursor" id="cerrarContenedorCrear" src="./img/iconoCerrar.png">
           <form id="formularioCrearTiposArticulos">
             <label id="tipo">Tipo: </label>
             <input class="inputCrearTipo textoClaro roboto" type="text" name="tipo" minlength="1" maxlength="1" required>
@@ -86,7 +86,7 @@
     </div>
 
     <div class="roboto textoClaro" id="contenedorCrearDestinos">
-      <img class="cambioCursor" id="cerrarContenedorDestinos" src="/img/iconoCerrar.png">
+      <img class="cambioCursor" id="cerrarContenedorDestinos" src="./img/iconoCerrar.png">
           <form id="formularioCrearDestinos">
             <br>
             <label id="direccion">Destino: </label>
@@ -101,7 +101,7 @@
 
     <footer class="footerAlmacen textoClaro absoluto">
       <div id="contenedorUbicacionAlmacen">
-        <img id="imagenUbicacionAlmacen" src="/img/iconoSeguimiento.png">
+        <img id="imagenUbicacionAlmacen" src="./img/iconoSeguimiento.png">
         <div id="ubicacion">Almacen Actual</div>
       </div>
     </footer>

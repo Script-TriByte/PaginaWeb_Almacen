@@ -24,7 +24,7 @@ $(document).ready(function () {
     } else {
         $('#idiomaDelSistema').css('background-image', 'url(/img/banderaUruguay.png)')
     }
-    Promise.all([fetch("/" + ruta), fetch('/json/elementos.json')])
+    Promise.all([fetch("/" + ruta), fetch('../json/es.json')])
     .then((responses) => Promise.all(responses.map((response) => response.json())))
     .then((data) => {
         const idioma = data[0];

@@ -2,8 +2,8 @@ import { ruta } from "./variables.js";
 import { urlAPIAlmacenes } from "./configuracion.js";
 
 function revelarPreviewArticulos(){
-    $(".contenedorAccesoAListas").css("background-image", "url(/img/BGArticulos.png)");
-    $("#iconoListadoArticulos").attr("src", "/img/iconoArticuloHover.png");
+    $(".contenedorAccesoAListas").css("background-image", "url(./img/BGArticulos.png)");
+    $("#iconoListadoArticulos").attr("src", "./img/iconoArticuloHover.png");
     $("#botonListaPaquetes").css("opacity", "50%");
     $("#botonListaLotes").css("opacity", "50%");
     $("#botonTiposArticulos").css("opacity", "50%");
@@ -11,8 +11,8 @@ function revelarPreviewArticulos(){
 }
 
 function revelarPreviewPaquetes(){
-    $(".contenedorAccesoAListas").css("background-image", "url(/img/BGPaquetes.png)");
-    $("#iconoListadoPaquetes").attr("src", "/img/iconoPaqueteHover.png");
+    $(".contenedorAccesoAListas").css("background-image", "url(./img/BGPaquetes.png)");
+    $("#iconoListadoPaquetes").attr("src", "./img/iconoPaqueteHover.png");
     $("#botonListaArticulos").css("opacity", "50%");
     $("#botonListaLotes").css("opacity", "50%");
     $("#botonTiposArticulos").css("opacity", "50%");
@@ -20,8 +20,8 @@ function revelarPreviewPaquetes(){
 }
 
 function revelarPreviewLotes(){
-    $(".contenedorAccesoAListas").css("background-image", "url(/img/BGLotes.png)");
-    $("#iconoListadoLotes").attr("src", "/img/iconoLoteHover.png");
+    $(".contenedorAccesoAListas").css("background-image", "url(./img/BGLotes.png)");
+    $("#iconoListadoLotes").attr("src", "./img/iconoLoteHover.png");
     $("#botonListaArticulos").css("opacity", "50%");
     $("#botonListaPaquetes").css("opacity", "50%");
     $("#botonTiposArticulos").css("opacity", "50%");
@@ -29,7 +29,7 @@ function revelarPreviewLotes(){
 }
 
 function revelarPreviewTiposArticulos(){
-    $(".contenedorAccesoAListas").css("background-image", "url(/img/BGTipoArticulo.png)");
+    $(".contenedorAccesoAListas").css("background-image", "url(./img/BGTipoArticulo.png)");
     $("#botonListaArticulos").css("opacity", "50%");
     $("#botonListaPaquetes").css("opacity", "50%");
     $("#botonListaLotes").css("opacity", "50%");
@@ -37,7 +37,7 @@ function revelarPreviewTiposArticulos(){
 }
 
 function revelarPreviewDestinos(){
-    $(".contenedorAccesoAListas").css("background-image", "url(/img/BGSeguimiento.png)");
+    $(".contenedorAccesoAListas").css("background-image", "url(./img/BGSeguimiento.png)");
     $("#botonListaArticulos").css("opacity", "50%");
     $("#botonListaPaquetes").css("opacity", "50%");
     $("#botonListaLotes").css("opacity", "50%");
@@ -45,15 +45,15 @@ function revelarPreviewDestinos(){
 }
 
 function restaurarBody(){
-    $(".contenedorAccesoAListas").css("background-image", "url(/img/BGAlmacen.png)");
+    $(".contenedorAccesoAListas").css("background-image", "url(./img/BGAlmacen.png)");
 
-    $("#iconoListadoArticulos").attr("src", "/img/iconoArticulo.png");
+    $("#iconoListadoArticulos").attr("src", "./img/iconoArticulo.png");
     $("#botonListaArticulos").css("opacity", "100%");
     
-    $("#iconoListadoPaquetes").attr("src", "/img/iconoPaquete.png");
+    $("#iconoListadoPaquetes").attr("src", "./img/iconoPaquete.png");
     $("#botonListaPaquetes").css("opacity", "100%");
 
-    $("#iconoListadoLotes").attr("src", "/img/iconoLote.png");
+    $("#iconoListadoLotes").attr("src", "./img/iconoLote.png");
     $("#botonListaLotes").css("opacity", "100%");
 
     $("#botonTiposArticulos").css("opacity", "100%");
@@ -177,9 +177,9 @@ function crearDestino(formData) {
 
 $(document).ready(function () {
     if(document.cookie.indexOf("lang=en") !== -1){
-        $('#idiomaDelSistema').css('background-image', 'url(/img/banderaUK.png)')
+        $('#idiomaDelSistema').css('background-image', 'url(./img/banderaUK.png)')
     } else {
-        $('#idiomaDelSistema').css('background-image', 'url(/img/banderaUruguay.png)')
+        $('#idiomaDelSistema').css('background-image', 'url(./img/banderaUruguay.png)')
     }
     Promise.all([fetch(ruta), fetch('./json/elementos.json')])
     .then((responses) => Promise.all(responses.map((response) => response.json())))
