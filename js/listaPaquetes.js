@@ -46,6 +46,7 @@ function listarPaquetes(){
             data.forEach(item => {
                 const fila = document.createElement('tr');
                 fila.innerHTML = `
+<<<<<<< HEAD
                   <td>${item.idPaquete}</td>
                   <td>${item.cantidadArticulos}</td>
                   <td>${item.peso}</td>
@@ -64,6 +65,16 @@ function listarPaquetes(){
                     });
                 });
             }
+=======
+                  <td>${item.idLote}</td>
+                  <td>${item.cantidadArticulos}</td>
+                  <td>${item.Peso}</td>
+                  <td><button class="botonMasInfo cambioCursor" id="imagenBotonEditar" title="Editar Paquete" value="${item.idPaquete}"></button></td>
+                  <td><button class="botonMasInfo cambioCursor" id="imagenBotonEliminar" title="Eliminar Paquete" value="${item.idPaquete}"></button></td>
+                `;
+                cuerpoDeLaTabla.appendChild(fila);
+            });
+>>>>>>> 318322dc79521d18cf1913d56b683e42fef16db5
         } 
         if (Array.isArray(data) && data.length === 0) {
             $('#mensajeInformacion').show();
@@ -71,6 +82,7 @@ function listarPaquetes(){
     })
     .catch(error => {
         document.getElementById('contenedorPaquetes').style.display = "none";
+<<<<<<< HEAD
         $('#contenedorMensajeDeError').css('display', 'block');
     });
 }
@@ -83,15 +95,31 @@ function mostrarFormularioAsignarPeso(){
 function asignarPeso(formData) {
     fetch(urlAPIAlmacenes + '/api/v3/paquete/' + idEditarPeso, {
         method: 'PUT',
+=======
+        contenedorMensajeDeError.style.display = "Block";
+    })
+}
+
+function crearPaquete(formData) {
+    fetch(urlAPIAlmacenes + '/api/v3/paquete', {
+        method: 'POST',
+>>>>>>> 318322dc79521d18cf1913d56b683e42fef16db5
         body: formData
     })
     .then(response => response.json())
     .then(data => {
+<<<<<<< HEAD
         if (data.status == 401 || data.status == 404 || data.status == 500){
             throw new Error(data.mensaje)
         } else {
             location.reload();
         }
+=======
+        if (data.status == 200 || data.status == 201) {
+            return location.reload();
+        }
+        throw new Error(data.mensaje)
+>>>>>>> 318322dc79521d18cf1913d56b683e42fef16db5
     })
     .catch(error => {
         alert(error);
@@ -121,7 +149,10 @@ $(document).ready(function () {
             }
         }
     })
+    listarPaquetes()
+});
 
+<<<<<<< HEAD
     listarPaquetes();
 });
 
@@ -159,4 +190,10 @@ document.getElementById("formularioAsignarPeso").addEventListener("submit", func
     event.preventDefault();
     const formData = new FormData(this);
     asignarPeso(formData);
+=======
+$document.getElementById("formularioCrearPaquetes").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+    crearLote(formData)
+>>>>>>> 318322dc79521d18cf1913d56b683e42fef16db5
 });

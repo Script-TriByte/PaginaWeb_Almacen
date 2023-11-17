@@ -126,8 +126,6 @@ $(document).ready(function () {
             }
         }
     })
-    listarLotes();
-});
 
 document.getElementById("formularioCrearLotes").addEventListener("submit", function(event) {
     event.preventDefault();

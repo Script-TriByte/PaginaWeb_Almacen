@@ -49,11 +49,15 @@
     "11": "almacen",
     "12": "botonCrearLote",
     "13": "eliminarArmado",
+<<<<<<< HEAD
     "14": "mensajeInformacion",
     "15": "mensajeDeError",
     "16": "thPaquetes",
     "17": "thDestino",
     "18": "thAlmacen"
+=======
+    "14": "mensajeInformacion"
+>>>>>>> 318322dc79521d18cf1913d56b683e42fef16db5
 },
 {
     "0": "acercaDe",
@@ -68,6 +72,7 @@
     "9": "cantidadArticulos",
     "10": "botonCrearPaquete",
     "11": "cancelarArmado",
+<<<<<<< HEAD
     "12": "mensajeInformacion",
     "13": "codigoDeBulto2",
     "14": "thArticulos",
@@ -98,5 +103,8 @@
     "5": "sDescripcion",
     "6": "scDescripcion",
     "7": "scrDescripcion"
+=======
+    "12": "mensajeInformacion"
+>>>>>>> 318322dc79521d18cf1913d56b683e42fef16db5
 }
 ]

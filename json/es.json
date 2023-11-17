@@ -49,11 +49,15 @@
   "11": "Almacén: ",
   "12": "Embalsar Lote",
   "13": "Eliminar Armado",
+<<<<<<< HEAD
   "14": "No hay lotes para listar.",
   "15": "No se ha podido conectar al servidor. Inténtelo más tarde.",
   "16": "Cantidad de Paquetes",
   "17": "ID Destino",
   "18": "ID Almacén"
+=======
+  "14": "No hay lote para listar"
+>>>>>>> 318322dc79521d18cf1913d56b683e42fef16db5
 },
 {
   "0": "ACERCA DE",
@@ -68,6 +72,7 @@
   "9": "Cantidad de Artículos: ",
   "10": "Embalsar Paquete",
   "11": "Cancelar Armado",
+<<<<<<< HEAD
   "12": "No hay paquetes para listar.",
   "13": "ID Código de Bulto: ",
   "14": "Cantidad de Artículos",
@@ -99,3 +104,7 @@
   "6": "En lo que respecta a nuestro nombre, la palabra “Script” sugiere una relación con el software y la programación, mientras que “TriByte” está haciendo referencia al almacenamiento de datos en formato de bytes.",
   "7": "También posee relación con la idea de tres personas, siendo estas los fundadores de la empresa, trabajando en equipo para lograr los objetivos de la empresa, esto con el fin de transmitir los valores del trabajo en equipo y compromiso con el éxito colectivo."
 }]
+=======
+  "12": "No hay paquete para mostrar"
+}]
+>>>>>>> 318322dc79521d18cf1913d56b683e42fef16db5

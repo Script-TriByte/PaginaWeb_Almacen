@@ -49,11 +49,15 @@
   "11": "Store: ",
   "12": "Embalm Lot",
   "13": "Delete Assembly",
+<<<<<<< HEAD
   "14": "No lots to list.",
   "15": "Could not connect to the server. Try it later.",
   "16": "Packages amount",
   "17": "Destiny ID",
   "18": "Store ID"
+=======
+  "14": "No lot to list"
+>>>>>>> 318322dc79521d18cf1913d56b683e42fef16db5
 },
 {
   "0": "ABOUT",
@@ -68,6 +72,7 @@
   "9": "Quantity of Items: ",
   "10": "Embal Package",
   "11": "Cancel Arming",
+<<<<<<< HEAD
   "12": "No packages to list.",
   "13": "Bundle Code ID: ",
   "14": "Articles amount",
@@ -99,3 +104,8 @@
   "6": "As far as our name is concerned, the word “Script” suggests a relationship with software and programming, while “TriByte” is referring to the storage of data in byte format.",
   "7": "It is also related to the idea of three people, these being the founders of the company, working as a team to achieve the company's objectives, this in order to transmit the values of teamwork and commitment to collective success."
 }]
+=======
+  "12": "No package to show"
+}
+]
+>>>>>>> 318322dc79521d18cf1913d56b683e42fef16db5
