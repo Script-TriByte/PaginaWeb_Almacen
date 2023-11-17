@@ -11,14 +11,6 @@ $("#cerrarContenedorCrear, #eliminarArmado").click(function(){
     $(".contenedorCrearLotes").hide();
 })
 
-$("#botonBuscar").click(function(){
-    $("#formularioBuscarLotes").attr("action", urlAPIAlmacenes + "/api/v1/buscarLotes");
-})
-
-$("#botonCrearLote").click(function(){
-    $("#formularioCrearLotes").attr("action", urlAPIAlmacenes + "/api/v1/lotes");
-})
-
 function aplicarIngles() {
     document.cookie = "lang=en;path=/"
     location.reload()
@@ -36,6 +28,80 @@ $('#idiomaDelSistema').click(function(){
         aplicarIngles()
     }
 });
+
+function listarLotes(){
+    fetch(urlAPIAlmacenes + '/api/v3/lotes', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        const cuerpoDeLaTabla = document.getElementById('informacionLotes');
+
+        if (data != null) {
+            data.forEach(item => {
+                const fila = document.createElement('tr');
+                fila.innerHTML = `
+                  <td>${item.idLote}</td>
+                  <td>${item.cantidadPaquetes}</td>
+                  <td>${item.idDestino}</td>
+                  <td>${item.idAlmacen}</td>
+                  <td><button class="botonMasInfo cambioCursor botonAsignar" title="Asignar Chofer" value="${item.idLote}"></button></td>
+                  <td><button class="botonMasInfo cambioCursor botonEliminar" title="Eliminar Lote" value="${item.idLote}"></button></td>
+                `;
+                cuerpoDeLaTabla.appendChild(fila);
+            });
+
+            const botonesMasInfo = document.querySelectorAll('.botonEliminar');
+
+            if(botonesMasInfo.length > 0){
+                Array.from(botonesMasInfo).forEach(function(boton) {
+                    boton.addEventListener('click', function() {
+                        let id = this.value;
+                        eliminarLote(id);
+                    });
+                });
+            }
+        } 
+        if (Array.isArray(data) && data.length === 0) {
+            $('#mensajeInformacion').show();
+        }
+    })
+    .catch(error => {
+        document.getElementById('contenedorLotes').style.display = "none";
+        $('#contenedorMensajeDeError').css('display', 'block');
+    })
+}
+
+function crearLote(formData) {
+    fetch(urlAPIAlmacenes + '/api/v3/lote', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status == 401 || data.status == 404){
+            throw new Error(data.mensaje)
+        } else {
+            location.reload();
+        }
+    })
+    .catch(error => {
+        alert(error);
+    });
+}
+
+function eliminarLote(id){
+    fetch(urlAPIAlmacenes + '/api/v3/lote/' + id, {
+        method: 'DELETE'
+    })
+    .then(response => response.json())
+    .then(data => {
+        location.reload();
+    })
+}
 
 $(document).ready(function () {
     if(document.cookie.indexOf("lang=en") !== -1){
@@ -60,5 +126,11 @@ $(document).ready(function () {
             }
         }
     })
+    listarLotes();
+});
 
+document.getElementById("formularioCrearLotes").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+    crearLote(formData)
 });

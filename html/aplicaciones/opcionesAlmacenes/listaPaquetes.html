@@ -23,7 +23,6 @@
         <li><a href="/html/opcionesHeader/acercaDe.html" id="acercaDe">ACERCA DE</a></li>
         <li class="cambioCursor"><a href="/html/opcionesHeader/contacto.html" id="contacto">CONTACTO</a></li>
         <li><div class="boton textoClaro cambioCursor divEnHeader" id="idiomaDelSistema"></div></li>
-        <li><div class="boton textoClaro cambioCursor divEnHeader" id="aparienciaDelSistema"></div></li>
         <li>
           <div id="contenedorUsuario">
             <img class="usuario" id="iconoUsuario" src="/img/iconoUsuario.png">
@@ -47,7 +46,7 @@
         <div class="opcionesPaquetes">
             <img src="/img/iconoAgregar.png" class="cambioCursor" id="crearPaquete">
             <label class="textoClaro"><b>|</b></label>
-            <form action="/" id="formularioBuscarPaquetes" method="post">
+            <form id="formularioBuscarPaquetes" method="post">
                 <input class="roboto textoClaro" id="barraDeBusqueda" name="barraDeBusqueda" placeholder="Buscar Paquete">
                 <div class="roboto textoClaro" id="contenedorFiltroDeBusqueda">
                   <label id="filtroBusqueda"><b>Filtro de Búsqueda:</b></label>
@@ -64,20 +63,52 @@
         </div>
         <hr>
     </div>
+
+    <div id="contenedorPaquetes">
+      <table id="informacionPaquetes">
+        <tr>
+          <th class="bordeInferior">ID</th>
+          <th class="bordeInferior" id="thArticulos">Cant. Artículos</th>
+          <th class="bordeInferior" id="thPeso">Peso (Kg)</th>
+          <th></th>
+        </tr>
+      </table>
+      <label id="mensajeInformacion"></label>
+    </div>
+
     <div class="contenedorCrearPaquetes roboto textoClaro">
         <img class="cambioCursor" id="cerrarContenedorCrear" src="/img/iconoCerrar.png">
-        <form action="" method="post" id="formularioCrearPaquetes">
-          <br>
+        <form id="formularioCrearPaquetes">
+            <br>
             <label id="idArticulo"><b>ID del Artículo: </b></label>
-            <input type="number" class="inputCrearPaquete textoClaro roboto" min="1" max="9999999" required>
+            <input type="number" class="inputCrearPaquete textoClaro roboto" name="idArticulo" min="1" max="99999999" required>
             <br><br>
             <label id="cantidadArticulos"><b>Cantidad de Artículos: </b></label>
-            <input type="number" class="inputCrearPaquete textoClaro roboto" min="1" max="20" required>
+            <input type="number" class="inputCrearPaquete textoClaro roboto" name="cantidadArticulos" min="1" max="20" required>
+            <br><br>
+            <label id="codigoDeBulto2"><b>Código de bulto: </b></label>
+            <input type="number" class="inputCrearPaquete textoClaro roboto" name="codigoDeBulto" min="1" max="9" required>
             <br><br>
             <button type="submit" class="botonCrearPaquetes roboto textoClaro cambioCursor" id="botonCrearPaquete"><b>Embalsar Paquete</b></button>
         </form>
         <button class="botonCrearPaquetes roboto textoClaro cambioCursor" id="cancelarArmado"><b>Cancelar Armado</b></button>
     </div>
+
+    <div id="contenedorAsignarPeso">
+      <img class="cambioCursor" id="cerrarContenedorPeso" src="/img/iconoCerrar.png">
+      <form id="formularioAsignarPeso">
+        <br>
+        <label id="pesoAsignar"><b>Nuevo peso (Kg): </b></label>
+        <input type="number" class="inputCrearPaquete textoClaro roboto" name="peso" min="1" required>
+        <br><br>
+        <button class="botonAsignar roboto textoClaro cambioCursor" type="submit" id="asignar">Asignar</button>
+      </form>
+    </div>
+
+    <div id="contenedorMensajeDeError">
+      <label class="textoClaro" id="mensajeDeError"></label>
+    </div>
     <script type="module" src="/js/listaPaquetes.js"></script>
+    <script type="module" src="/js/variables.js"></script>
 </body>
 </html>

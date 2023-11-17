@@ -4,7 +4,15 @@
   "2": "Lista de Lotes",
   "3": "ACERCA DE",
   "4": "CONTACTO",
-  "5": "CERRAR SESIÓN"
+  "5": "CERRAR SESIÓN",
+  "6": "Crear Tipo de Artíc.",
+  "7": "Tipo: ",
+  "8": "Nombre: ",
+  "9": "Crear",
+  "10": "Añadir Destino",
+  "11": "ID Departamento: ",
+  "12": "Dirección: ",
+  "13": "Crear"
 },
 {
   "0": "ACERCA DE",
@@ -18,9 +26,13 @@
   "8": "ID Artículo",
   "9": "ID Tipo de Artículo",
   "10": "Buscar Artículo",
-  "11": "Nombre",
-  "12": "Año de creación",
-  "13": "Tipo de Artículo"
+  "11": "Nombre: ",
+  "12": "Año de creación: ",
+  "13": "Tipo de Artículo: ",
+  "14": "Nuevo nombre: ",
+  "15": "Tipos de Artículo: ",
+  "16": "Añadir",
+  "17": "Modificar"
 },
 {
   "0": "ACERCA DE",
@@ -31,12 +43,17 @@
   "5": "Código Identificador",
   "6": "Código de Bulto",
   "7": "Tipo de Artículo",
-  "8": "ID del Lote: ",
+  "8": "ID Paquete: ",
   "9": "Cantidad de Paquetes: ",
   "10": "Destino: ",
   "11": "Almacén: ",
   "12": "Embalsar Lote",
-  "13": "Eliminar Armado"
+  "13": "Eliminar Armado",
+  "14": "No hay lotes para listar.",
+  "15": "No se ha podido conectar al servidor. Inténtelo más tarde.",
+  "16": "Cantidad de Paquetes",
+  "17": "ID Destino",
+  "18": "ID Almacén"
 },
 {
   "0": "ACERCA DE",
@@ -50,5 +67,35 @@
   "8": "ID del Artículo: ",
   "9": "Cantidad de Artículos: ",
   "10": "Embalsar Paquete",
-  "11": "Cancelar Armado"
+  "11": "Cancelar Armado",
+  "12": "No hay paquetes para listar.",
+  "13": "ID Código de Bulto: ",
+  "14": "Cantidad de Artículos",
+  "15": "Peso (Kg)",
+  "16": "Nuevo peso (Kg): ",
+  "17": "Asignar",
+  "18": "No se ha podido conectar al servidor. Inténtelo más tarde."
+},
+{
+  "0": "ACERCA DE",
+  "1": "CONTACTO",
+  "2": "CERRAR SESIÓN",
+  "3": "NOMBRE",
+  "4": "*",
+  "5": "TELÉFONO:",
+  "6": "CORREO ELECTRÓNICO ",
+  "7": "*",
+  "8": "MENSAJE ",
+  "9": "*",
+  "10": "ENVIAR"
+},
+{
+  "0": "ACERCA DE",
+  "1": "CONTACTO",
+  "2": "CERRAR SESIÓN",
+  "3": "La empresa QUICK CARRY se dedica al transporte de paquetería en distribución nacional con una presencia en la proximidad de las principales ciudades y centros poblados en la mayoría de los departamentos de Uruguay.",
+  "4": "Un cliente importante para QUICK CARRY es CRECOM, compañía de distribución de Venta Flash en e-Commerce. CRECOM tiene la plataforma central en una zona industrial de las proximidades de Montevideo.",
+  "5": "“Script TriByte” es una empresa centrada principalmente en el desarrollo de software en Uruguay para todo público. Con el objetivo de crear programas que faciliten los medios de trabajo de nuestros clientes.",
+  "6": "En lo que respecta a nuestro nombre, la palabra “Script” sugiere una relación con el software y la programación, mientras que “TriByte” está haciendo referencia al almacenamiento de datos en formato de bytes.",
+  "7": "También posee relación con la idea de tres personas, siendo estas los fundadores de la empresa, trabajando en equipo para lograr los objetivos de la empresa, esto con el fin de transmitir los valores del trabajo en equipo y compromiso con el éxito colectivo."
 }]

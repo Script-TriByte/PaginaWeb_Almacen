@@ -4,7 +4,15 @@
     "2": "listaLotes",
     "3": "acercaDe",
     "4": "contacto",
-    "5": "cerrarSesion"
+    "5": "cerrarSesion",
+    "6": "tiposArticulos",
+    "7": "tipo",
+    "8": "nombre",
+    "9": "botonCrearTipo",
+    "10": "destinos",
+    "11": "idDepartamento",
+    "12": "direccion",
+    "13": "botonCrearDestino"
 },
 {
     "0": "acercaDe",
@@ -20,7 +28,11 @@
     "10": "barraDeBusqueda",
     "11": "nombre",
     "12": "anioCreacion",
-    "13": "tipoArticulo"
+    "13": "tipoArticulo",
+    "14": "nom",
+    "15": "obtenerTipos",
+    "16": "botonCrearArticulo",
+    "17": "modificar"
 },
 {
     "0": "acercaDe",
@@ -36,7 +48,12 @@
     "10": "destino",
     "11": "almacen",
     "12": "botonCrearLote",
-    "13": "eliminarArmado"
+    "13": "eliminarArmado",
+    "14": "mensajeInformacion",
+    "15": "mensajeDeError",
+    "16": "thPaquetes",
+    "17": "thDestino",
+    "18": "thAlmacen"
 },
 {
     "0": "acercaDe",
@@ -50,6 +67,36 @@
     "8": "idArticulo",
     "9": "cantidadArticulos",
     "10": "botonCrearPaquete",
-    "11": "cancelarArmado"
+    "11": "cancelarArmado",
+    "12": "mensajeInformacion",
+    "13": "codigoDeBulto2",
+    "14": "thArticulos",
+    "15": "thPeso",
+    "16": "pesoAsignar",
+    "17": "asignar",
+    "18": "mensajeDeError"
+},
+{
+    "0": "acercaDe",
+    "1": "contacto",
+    "2": "cerrarSesion",
+    "3": "name",
+    "4": "asterisco1",
+    "5": "tel",
+    "6": "correo",
+    "7": "asterisco2",
+    "8": "texto",
+    "9": "asterisco3",
+    "10": "botonEnviar"
+},
+{
+    "0": "acercaDe",
+    "1": "contacto",
+    "2": "cerrarSesion",
+    "3": "qDescripcion",
+    "4": "quDescripcion",
+    "5": "sDescripcion",
+    "6": "scDescripcion",
+    "7": "scrDescripcion"
 }
 ]

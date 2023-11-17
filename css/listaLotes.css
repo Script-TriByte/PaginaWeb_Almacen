@@ -9,6 +9,66 @@
     height: 100%;
 }
 
+.botonAsignar{
+    background-color: rgba(0, 0, 0, 0.0);
+    background-image: url(/img/iconoUsuario.png);
+    background-size: cover;
+    border: none;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+.botonEliminar{
+    background-color: rgba(0, 0, 0, 0.0);
+    background-image: url(/img/iconoEliminar.png);
+    background-size: cover;
+    border: none;
+    width: 20px;
+    height: 20px;
+}
+
+#mensajeInformacion{
+    display: none;
+}
+
+#contenedorMensajeDeError{
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: calc(50% - 30px);
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.contenedorLotes{
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    scale: 200%;
+    position: absolute;
+    left: 15%;
+    top: 20%;
+}
+
+#contenedorLotes{
+    height: fit-content;
+    width: 450px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    scale: 200%;
+    position: absolute;
+    left: 15%;
+    top: 40%;
+    flex-direction: column;
+    color: #fddfb5;
+}
+
 .contenedorCrearLotes{
     display: none;
     position: absolute;

@@ -23,7 +23,6 @@
           <li><a href="/html/opcionesHeader/acercaDe.html" id="acercaDe">ACERCA DE</a></li>
           <li class="cambioCursor"><a href="/html/opcionesHeader/contacto.html" id="contacto">CONTACTO</a></li>
           <li><div class="boton textoClaro cambioCursor divEnHeader" id="idiomaDelSistema"></div></li>
-          <li><div class="boton textoClaro cambioCursor divEnHeader" id="aparienciaDelSistema"></div></li>
           <li>
             <div id="contenedorUsuario">
               <img class="usuario" id="iconoUsuario" src="/img/iconoUsuario.png">
@@ -48,7 +47,7 @@
         <div class="opcionesLotes">
             <img src="/img/iconoAgregar.png" class="cambioCursor" id="crearLote">
             <label class="textoClaro"><b>|</b></label>
-            <form action="/" id="formularioBuscarLotes" method="post">
+            <form id="formularioBuscarLotes">
                 <input class="roboto textoClaro" id="barraDeBusqueda" name="barraDeBusqueda" placeholder="Buscar Lote">
                 <div class="roboto textoClaro" id="contenedorFiltroDeBusqueda">
                     <label id="filtroBusqueda"><b>Filtro de Búsqueda:</b></label>
@@ -65,25 +64,42 @@
         </div>
         <hr>
     </div>
+
+    <div id="contenedorLotes">
+      <table id="informacionLotes">
+        <tr>
+          <th class="bordeInferior">ID</th>
+          <th class="bordeInferior" id="thPaquetes">Cantidad de Paquetes</th>
+          <th class="bordeInferior" id="thDestino">ID Destino</th>
+          <th class="bordeInferior" id="thAlmacen">ID Almacén</th>
+          <th></th>
+        </tr>
+      </table>
+      <label id="mensajeInformacion"></label>
+    </div>
+
     <div class="contenedorCrearLotes roboto textoClaro">
         <img class="cambioCursor" id="cerrarContenedorCrear" src="/img/iconoCerrar.png">
         <form action="" method="post" id="formularioCrearLotes">
           <br>
-            <label id="idLote"><b>ID del Lote: </b></label>
-            <input type="number" class="inputCrearLote textoClaro roboto" min="1" max="9999999" required>
+            <label id="idLote"><b>ID Paquete: </b></label>
+            <input type="number" class="inputCrearLote textoClaro roboto" min="1" max="9999999" name="idPaquete" required>
             <br><br>
             <label id="cantidadPaquetes"><b>Cantidad de Paquetes: </b></label>
-            <input type="number" class="inputCrearLote textoClaro roboto" min="1" max="20" required>
+            <input type="number" class="inputCrearLote textoClaro roboto" min="1" max="20" name="cantidadPaquetes" required>
             <br><br>
             <label id="destino"><b>Destino: </b></label>
-            <input type="text" class="inputCrearLote textoClaro roboto" required>
+            <input type="text" class="inputCrearLote textoClaro roboto" name="idDestino" required>
             <br><br>
             <label id="almacen"><b>Almacén: </b></label>
-            <input type="number" class="inputCrearLote textoClaro roboto" min="1" max="9999999" required>
+            <input type="number" class="inputCrearLote textoClaro roboto" name="idAlmacen" min="1" max="9999999" required>
             <br><br>
             <button type="submit" class="botonCrearLote roboto textoClaro cambioCursor" id="botonCrearLote"><b>Embalsar Lote</b></button>
         </form>
         <button class="botonCrearLote roboto textoClaro cambioCursor" id="eliminarArmado"><b>Eliminar Armado</b></button>
+    </div>
+    <div id="contenedorMensajeDeError">
+      <label class="textoClaro" id="mensajeDeError"></label>
     </div>
     <script type="module" src="/js/listaLotes.js"></script>
     <script type="module" src="/js/variables.js"></script>

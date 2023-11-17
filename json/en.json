@@ -4,7 +4,15 @@
   "2": "List of Lots",
   "3": "ABOUT",
   "4": "CONTACT",
-  "5": "LOG OUT"
+  "5": "LOG OUT",
+  "6": "Add Article Type",
+  "7": "Type: ",
+  "8": "Name: ",
+  "9": "Add",
+  "10": "Add Destiny",
+  "11": "Department ID: ",
+  "12": "Address: ",
+  "13": "Add"
 },
 {
   "0": "ABOUT",
@@ -18,9 +26,13 @@
   "8": "Article ID",
   "9": "Type ID",
   "10": "Search Article",
-  "11": "Name",
-  "12": "Year of creation",
-  "13": "Article Type"
+  "11": "Name: ",
+  "12": "Year of creation: ",
+  "13": "Article Type: ",
+  "14": "New name: ",
+  "15": "Article Types: ",
+  "16": "Add",
+  "17": "Modify"
 },
 {
   "0": "ABOUT",
@@ -31,12 +43,17 @@
   "5": "Identifier Code",
   "6": "Package Code",
   "7": "Article Type",
-  "8": "Lot ID: ",
+  "8": "Package ID: ",
   "9": "Number of Packages: ",
   "10": "Destination: ",
   "11": "Store: ",
   "12": "Embalm Lot",
-  "13": "Delete Assembly"
+  "13": "Delete Assembly",
+  "14": "No lots to list.",
+  "15": "Could not connect to the server. Try it later.",
+  "16": "Packages amount",
+  "17": "Destiny ID",
+  "18": "Store ID"
 },
 {
   "0": "ABOUT",
@@ -50,6 +67,35 @@
   "8": "Article ID: ",
   "9": "Quantity of Items: ",
   "10": "Embal Package",
-  "11": "Cancel Arming"
-}
-]
+  "11": "Cancel Arming",
+  "12": "No packages to list.",
+  "13": "Bundle Code ID: ",
+  "14": "Articles amount",
+  "15": "Weight (Kg)",
+  "16": "New weight (Kg)",
+  "17": "Assign",
+  "18": "Could not connect to the server. Try it later."
+},
+{
+  "0": "ABOUT",
+  "1": "CONTACT",
+  "2": "LOG OUT",
+  "3": "NAME",
+  "4": "*",
+  "5": "PHONE:",
+  "6": "EMAIL ",
+  "7": "*",
+  "8": "MESSAGE ",
+  "9": "*",
+  "10": "SEND"
+},
+{
+  "0": "ABOUT",
+  "1": "CONTACT",
+  "2": "LOG OUT",
+  "3": "The company QUICK CARRY is dedicated to the transport of parcels in national distribution with a presence in the vicinity of the main cities and population centers in most of the departments of Uruguay.",
+  "4": "An important client for QUICK CARRY is CRECOM, a distribution company for Flash Selling in e-Commerce. CRECOM has the central platform in an industrial area near Montevideo.",
+  "5": "“Script TriByte” is a company mainly focused on the development of software in Uruguay for all audiences. With the aim of creating programs that facilitate the means of work of our clients.",
+  "6": "As far as our name is concerned, the word “Script” suggests a relationship with software and programming, while “TriByte” is referring to the storage of data in byte format.",
+  "7": "It is also related to the idea of three people, these being the founders of the company, working as a team to achieve the company's objectives, this in order to transmit the values of teamwork and commitment to collective success."
+}]

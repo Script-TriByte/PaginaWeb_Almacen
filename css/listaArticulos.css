@@ -15,6 +15,46 @@ body{
     top: 20%;
 }
 
+#contenedorTiposDeArticulo{
+    display: none;
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 250px);
+    z-index: 2;
+    background-color: #4a0913;
+    padding: 20px;
+    border: solid 3px #fddfb5;
+    border-radius: 5px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    font-size: 30px;
+    color: #fddfb5;
+    width: 400px;
+}
+
+.botonMasInfo{
+    background-color: rgba(0, 0, 0, 0.0);
+    border: solid 2px #fddfb5;
+    color: #fddfb5;
+}
+
+.botonEditar{
+    background-image: url(/img/iconoEditar.png);
+    background-size: cover;
+    border: none;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+.botonEliminar{
+    background-image: url(/img/iconoEliminar.png);
+    background-size: cover;
+    border: none;
+    width: 20px;
+    height: 20px;
+}
+
 .opcionesArticulos{
     display: flex;
     align-items: center;
@@ -107,7 +147,8 @@ option{
 
 #cerrarContenedorCrear,
 #cerrarContenedorModificar,
-#cerrarContenedorEliminar{
+#cerrarContenedorEliminar,
+#cerrarContenedorTipos{
     width: 30px;
     height: 30px;
     position: absolute;
@@ -149,10 +190,6 @@ option{
     top: 40%;
     flex-direction: column;
     color: #fddfb5;
-}
-
-.bordeInferior{
-    border-bottom: solid 2px #fddfb5;
 }
 
 .contenedor{

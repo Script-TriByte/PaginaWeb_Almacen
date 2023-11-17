@@ -2,6 +2,7 @@ import { ruta } from "./variables.js";
 import { urlAPIAlmacenes } from "./configuracion.js";
 
 let contenedorInformacion;
+let idEditarArticulo = 0;
 
 function aplicarIngles() {
     document.cookie = "lang=en;path=/"
@@ -59,12 +60,45 @@ function listarArticulos(){
                   <td>${item.idArticulo}</td>
                   <td>${item.nombre}</td>
                   <td>${item.anioCreacion}</td>
-                  <td><button class="botonMasInfo cambioCursor" id="botonInformacion" value="${item.idArticulo}">Info.</button></td>
-                  <td><button class="botonMasInfo cambioCursor" id="imagenBotonEditar" title="Editar Artículo" value="${item.idArticulo}"></button></td>
-                  <td><button class="botonMasInfo cambioCursor" id="imagenBotonEliminar" title="Eliminar Artículo" value="${item.idArticulo}"></button></td>
+                  <td><button class="botonMasInfo cambioCursor botonInfo" title="Ver mas informacion" value="${item.idArticulo}">Info.</button></td>
+                  <td><button class="botonMasInfo cambioCursor botonEditar" title="Editar Artículo" value="${item.idArticulo}"></button></td>
+                  <td><button class="botonMasInfo cambioCursor botonEliminar"  title="Eliminar Artículo" value="${item.idArticulo}"></button></td>
                 `;
                 cuerpoDeLaTabla.appendChild(fila);
             });
+
+            const botonesMasInfo = document.querySelectorAll('.botonInfo');
+
+            if(botonesMasInfo.length > 0){
+                Array.from(botonesMasInfo).forEach(function(boton) {
+                    boton.addEventListener('click', function() {
+                        let id = this.value;
+                        mostrarMasInformacion(id);
+                    });
+                });
+            }
+
+            const botonesEditar = document.querySelectorAll('.botonEditar');
+
+            if(botonesEditar.length > 0){
+                Array.from(botonesEditar).forEach(function(boton) {
+                    boton.addEventListener('click', function() {
+                        idEditarArticulo = this.value;
+                        mostrarFormularioModificarArticulos();
+                    });
+                });
+            }
+
+            const botonesEliminar = document.querySelectorAll('.botonEliminar');
+
+            if(botonesEliminar.length > 0){
+                Array.from(botonesEliminar).forEach(function(boton) {
+                    boton.addEventListener('click', function() {
+                        const id = this.value;
+                        eliminarArticulo(id);
+                    });
+                });
+            }
         } 
         if (Array.isArray(data) && data.length === 0) {
             $('#mensajeInformacion').show();
@@ -72,8 +106,13 @@ function listarArticulos(){
     })
     .catch(error => {
         document.getElementById('contenedorArticulos').style.display = "none";
-        contenedorMensajeDeError.style.display = "Block";
+        $('#contenedorMensajeDeError').css('display', 'block');
     })
+}
+
+function mostrarFormularioModificarArticulos(){
+    $("#ajusteBrillo").show();
+    $(".ArticuloAModificar").show();
 }
 
 function crearArticulo(formData) {
@@ -83,14 +122,41 @@ function crearArticulo(formData) {
     })
     .then(response => response.json())
     .then(data => {
-        if (data.status == 200 || data.status == 201) {
-            return location.reload();
+        if (data.status == 401 || data.status == 404){
+            throw new Error(data.mensaje)
         }
-        throw new Error(data.mensaje)
+        location.reload();
     })
     .catch(error => {
         alert(error);
     });
+}
+
+function modificarArticulo(formData) {
+    fetch(urlAPIAlmacenes + '/api/v3/articulo/' + idEditarArticulo, {
+        method: 'PUT',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status == 401 || data.status == 404 || data.status == 500){
+            throw new Error(data.mensaje)
+        }
+        location.reload();
+    })
+    .catch(error => {
+        alert(error);
+    });
+}
+
+function eliminarArticulo(id){
+    fetch(urlAPIAlmacenes + '/api/v3/articulo/' + id, {
+        method: 'DELETE'
+    })
+    .then(response => response.json())
+    .then(data => {
+        location.reload();
+    })
 }
 
 $(document).ready(function () {
@@ -123,49 +189,48 @@ $("#botonCrearAlmacenes").click(function(){
     $("#formularioCrearArticulos").attr("action", "/articulos/crear");
 });
 
-$("#imagenBotonEditar").click(function() {
-    $("#ajusteBrillo").show();
-    $(".ArticuloAModificar").show();
-    $("#formularioModificarArticulos").attr("action", "api/v2/articulos/" +  valorInput);
-});
-
 $("#cerrarContenedorModificar").click(function() {
     $("#ajusteBrillo").hide();
     $(".ArticuloAModificar").hide();
 });
 
-$("#imagenBotonEliminar").click(function() {
-    $("#ajusteBrillo").show();
-    $(".ArticuloAEliminar").show();
-    $("#formularioEliminarArticulos").attr("action", "api/v2/articulos/" +  valorInput);
-});
-
-$("#cerrarContenedorEliminar").click(function() {
-    $("#ajusteBrillo").hide();
-    $(".ArticuloAEliminar").hide();
-});
-
-function mostrarMasInformacion(id) {
-    fetch(urlAPIAlmacenes + '/api/v3/tipoarticulo/' + id, {
+async function mostrarMasInformacion(id) {
+    const respuestaInfo = await fetch(urlAPIAlmacenes + '/api/v3/tipoarticulo/' + id, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
         }
     })
-    .then(response => response.json())
-    .then(data => {
-        contenedorInformacion = document.getElementById('contenedorTiposDeArticulo');
-        contenedorInformacion.style.display = "block";
-        data.forEach(item => {
-            var informacion = document.createElement("label");
-            informacion.textContent = item.tipo + ' - ' + item.nombre;
-            contenedorInformacion.appendChild(informacion);
-        });
-    })
+
+    const data = await respuestaInfo.json();
+
+    contenedorInformacion = document.getElementById('contenedorTiposDeArticulo');
+    contenedorInformacion.style.display = "block";
+    $("#ajusteBrillo").show();
+    data.forEach(item => {
+        var informacion = document.createElement("label");
+        informacion.className = "labelTipoArticulo";
+        informacion.textContent = item.tipo + ' - ' + item.nombre;
+        contenedorInformacion.appendChild(informacion);
+    });
 }
+
+$("#cerrarContenedorTipos").click(function() {
+    $("#ajusteBrillo").hide();
+    $("#contenedorTiposDeArticulo").hide();
+    document.querySelectorAll(".labelTipoArticulo").forEach(label => {
+        label.remove();
+    });
+});
 
 document.getElementById("formularioCrearArticulos").addEventListener("submit", function(event) {
     event.preventDefault();
     const formData = new FormData(this);
     crearArticulo(formData)
+});
+
+document.getElementById("formularioModificarArticulos").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+    modificarArticulo(formData)
 });

@@ -35,3 +35,7 @@ body{
 .roboto{
     font-family: 'Roboto', sans-serif;
 }
+
+.bordeInferior{
+    border-bottom: solid 2px #fddfb5;
+}

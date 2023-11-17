@@ -9,6 +9,72 @@
     height: 100%;
 }
 
+#contenedorAsignarPeso{
+    display: none;
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 250px);
+    z-index: 2;
+    background-color: #4a0913;
+    padding: 20px;
+    border: solid 3px #fddfb5;
+    border-radius: 5px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    font-size: 30px;
+    color: #fddfb5;
+}
+
+.botonAsignar{
+    background: none;
+    border: solid 2px #fddfb5;
+    border-radius: 5px;
+    font-size: 20px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+#cerrarContenedorPeso{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.botonPeso{
+    background-color: rgba(0, 0, 0, 0.0);
+    background-image: url(/img/IconoPeso.png);
+    background-size: cover;
+    border: none;
+    width: 20px;
+    height: 20px;
+}
+
+#contenedorMensajeDeError{
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: calc(50% - 30px);
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+#contenedorPaquetes{
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    scale: 200%;
+    position: absolute;
+    left: 10%;
+    top: 40%;
+    color: #fddfb5;
+}
+
 .contenedorCrearPaquetes{
     display: none;
     position: absolute;
@@ -70,6 +136,10 @@ body{
 #imagenBotonBuscar{
     width: 20px;
     height: 20px;
+}
+
+#mensajeInformacion{
+    display: none;
 }
 
 hr{

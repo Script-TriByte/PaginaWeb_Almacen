@@ -12,6 +12,7 @@
     <title>E.L.S - Informacion del Almacén</title>
 </head>
 <body>
+  <img id="ajusteBrillo" src="/img/BGNegro.png">
   <header class="textoClaro">
     <a href="/"><img class="logo" src="/img/Logo del Sistema.png"></a>
     <nav>
@@ -61,13 +62,43 @@
             <img class="iconoBotonListado" id="iconoListadoLotes" src="/img/iconoLote.png">
           </div>
         </a>
-        <a href="/html/aplicaciones/opcionesAlmacenes/listaTiposArticulo.html" class="botonListado">
-          <div class="cambioCursor textoClaro" id="botonListaTiposArticulo">
-            <label class="cambioCursor" id="listaTiposArticulo"><b>Lista Tipos Artíc.</b></label>
-            <img class="iconoBotonListado" id="iconoListadoTiposArticulo" src="/img/iconoPaquete.png">
-          </div>
-        </a>
+        <div class="cambioCursor textoClaro botonListado" id="botonTiposArticulos">
+            <label class="cambioCursor" id="tiposArticulos"><b>Crear Tipo de Artíc.</b></label>
+            <img class="iconoBotonListado" id="iconoTiposArticulos" src="/img/iconoPaquete.png">
+        </div>
+        <div class="cambioCursor textoClaro botonListado" id="botonDestinos">
+          <label class="cambioCursor" id="destinos"><b>Añadir destino</b></label>
+          <img class="iconoBotonListado" id="iconoDestinos" src="/img/iconoSeguimiento.png">
+      </div>
     </div>
+
+    <div class="roboto textoClaro" id="contenedorCrearTipos">
+      <img class="cambioCursor" id="cerrarContenedorCrear" src="/img/iconoCerrar.png">
+          <form id="formularioCrearTiposArticulos">
+            <label id="tipo">Tipo: </label>
+            <input class="inputCrearTipo textoClaro roboto" type="text" name="tipo" minlength="1" maxlength="1" required>
+            <br><br>
+            <label id="nombre">Nombre: </label>
+            <input class="inputCrearTipo textoClaro roboto" type="text" name="nombre" minlength="2" maxlength="50" required>
+            <br><br>
+          <button class="roboto textoClaro cambioCursor" type="submit" id="botonCrearTipo">Crear</button>
+        </form>
+    </div>
+
+    <div class="roboto textoClaro" id="contenedorCrearDestinos">
+      <img class="cambioCursor" id="cerrarContenedorDestinos" src="/img/iconoCerrar.png">
+          <form id="formularioCrearDestinos">
+            <br>
+            <label id="direccion">Destino: </label>
+            <input class="inputCrearTipo textoClaro roboto" type="text" name="direccion" minlength="2" maxlength="50" required>
+            <br><br>
+            <label id="idDepartamento">ID Departamento: </label>
+            <input class="inputCrearTipo textoClaro roboto" type="number" name="idDepartamento" min="1" max="19" required>
+            <br><br>
+          <button class="roboto textoClaro cambioCursor" type="submit" id="botonCrearDestino">Crear</button>
+        </form>
+    </div>
+
     <footer class="footerAlmacen textoClaro absoluto">
       <div id="contenedorUbicacionAlmacen">
         <img id="imagenUbicacionAlmacen" src="/img/iconoSeguimiento.png">
